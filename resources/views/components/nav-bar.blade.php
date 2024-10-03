@@ -1,6 +1,6 @@
 <nav class="w-full fixed lg:pt-12 justify-center z-50">
     <div
-        class="max-w-screen-2xl flex flex-wrap items-center justify-between p-2 border-2 border-orange shadow-lg lg:rounded-2xl bg-white lg:mx-20">
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between p-2 border-2 lg:border-[#FC6C3F] border-b-[#FC6C3F] shadow-lg lg:rounded-2xl bg-white lg:mx-20">
 
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse lg:ml-20">
             <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-12" alt="PRSPDNF Logo" />
@@ -13,7 +13,7 @@
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <!-- Contact Button: Only visible on lg and larger screens -->
             <div
-                class="contact-button lg:flex items-center lg:p-2 bg-orange text-white rounded-xl shadow-lg hidden lg:mr-20">
+                class="contact-button lg:flex items-center lg:p-2 bg-[#FC6C3F] text-white rounded-xl shadow-lg hidden lg:mr-20">
                 <img src="{{ asset('icon/phone-call.png') }}" alt="Phone Icon" class="w-6 h-6 mr-3">
                 <div>
                     <p class="lg:text-sm sm:text-xs font-medium">Hubungi Kami</p>
@@ -22,7 +22,7 @@
             </div>
 
             <!-- Mobile Menu Button: Only visible on small screens -->
-            <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+            <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#FC6C3F] dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -57,22 +57,17 @@
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Visi & Misi</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sejarah</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Struktur Organisasi</a>
                             </li>
                         </ul>
-                        <div class="py-1">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
-                                out</a>
-                        </div>
                     </div>
                 </li>
 

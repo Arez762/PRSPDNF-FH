@@ -9,6 +9,15 @@ export default {
   darkMode: 'class', // Mengaktifkan dark mode berdasarkan class
   theme: {
     extend: {
+      keyframes: {
+        "loop-scroll": {
+          from: {transform: "translateX(0)"},
+          to:{transform:"translateX(-100%)"},
+        }
+      },
+      animation: {
+        "loop-scroll":"loop-scroll 40s linear infinite"
+      },
       colors: {
         primary: {
           "50": "#eff6ff",

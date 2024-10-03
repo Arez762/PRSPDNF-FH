@@ -1,24 +1,4 @@
-<style>
-    .border-orange {
-        border-color: #FC6C3F !important;
-    }
 
-    .border-b-orange {
-        border-bottom-color: #FC6C3F !important;
-    }
-
-    .text-orange {
-        text-color: #FC6C3F !important;
-    }
-
-    .bg-orange {
-        background-color: #FC6C3F !important;
-    }
-
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
-</style>
 <section class="relative bg-white dark:bg-gray-900 z-10">
     <!-- Circles Decoration (Left) -->
     <div class="absolute -top-10 -left-10 z-0">

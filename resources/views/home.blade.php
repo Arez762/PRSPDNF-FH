@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 
@@ -18,14 +19,27 @@
     <x-nav-bar></x-nav-bar>
     <img src="{{ asset('Image/bg-white.png') }}" alt="" class="w-full h-55">
     <x-hero></x-hero>
-    {{-- <img src="{{ asset('Image/image.png') }}" alt=""> --}}
     <x-about></x-about>
     <x-why></x-why>
     <x-pelayanan></x-pelayanan>
     <x-fasilitas></x-fasilitas>
+    <x-galery></x-galery>
+    <x-news></x-news>
+    <x-review></x-review>
+    <x-card-all></x-card-all>
+    <x-sponsor></x-sponsor>
+    <x-footer></x-footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durasi animasi (ms)
+            easing: 'ease', // Jenis easing
+            once: true, // Apakah animasi hanya terjadi satu kali saat di-scroll
+        });
+    </script>
 </body>
 
 </html>
