@@ -11,7 +11,7 @@
         <img loading="lazy" src="{{ asset('logo-sponsor/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}" class="max-w-none w-42 h-32" alt="image1">
         <img loading="lazy" src="{{ asset('logo-sponsor/Kab Hulu Sungai Tengah.png') }}" class="max-w-none w-42 h-32" alt="image2">
         <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}" class="max-w-none w-42 h-32" alt="image3">
-        <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru_converted.png') }}" class="max-w-none w-42 h-32" alt="image4">
+        <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru-removebg-preview.png') }}" class="max-w-none w-42 h-32" alt="image4">
         <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}" class="max-w-none w-42 h-32" alt="image5">
         <img loading="lazy" src="{{ asset('logo-sponsor/LOGO_KAB_BANJAR.png') }}" class="max-w-none w-42 h-32" alt="image6">
         <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Kotabaru.png') }}" class="max-w-none w-42 h-32" alt="image7">
@@ -27,7 +27,7 @@
         <img loading="lazy" src="{{ asset('logo-sponsor/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}" class="max-w-none w-42 h-32" alt="image1">
         <img loading="lazy" src="{{ asset('logo-sponsor/Kab Hulu Sungai Tengah.png') }}" class="max-w-none w-42 h-32" alt="image2">
         <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}" class="max-w-none w-42 h-32" alt="image3">
-        <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru_converted.png') }}" class="max-w-none w-42 h-32" alt="image4">
+        <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru-removebg-preview.png') }}" class="max-w-none w-42 h-32" alt="image4">
         <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}" class="max-w-none w-42 h-32" alt="image5">
         <img loading="lazy" src="{{ asset('logo-sponsor/LOGO_KAB_BANJAR.png') }}" class="max-w-none w-42 h-32" alt="image6">
         <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Kotabaru.png') }}" class="max-w-none w-42 h-32" alt="image7">

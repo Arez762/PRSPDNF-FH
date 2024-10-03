@@ -1,4 +1,4 @@
-<div class="review-section text-center py-16 max-w-5xl mx-auto">
+<div class="review-section text-center py-16 max-w-5xl mx-auto" data-aos="fade-up" data-aos-once="true">
     <h2 class="text-3xl mb-8">
         Apa yang dikatakan oleh <span class="text-orange-500">pelanggan kami?</span>
     </h2>

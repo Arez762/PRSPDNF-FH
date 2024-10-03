@@ -13,13 +13,6 @@
         <div class="w-20 h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
     </div>
 
-    {{-- <!-- Circles Decoration (Right) -->
-    <div class="absolute -bottom-0 -right-10 z-0">
-        <div class="w-32 h-32 bg-orange-500 rounded-full"></div>
-        <div class="w-16 h-16 bg-orange-400 rounded-full mt-4 ml-8"></div>
-        <div class="w-8 h-8 bg-orange-300 rounded-full mt-2 ml-12"></div>
-    </div> --}}
-
     <!-- Main Content -->
     <div class="relative z-10 py-16 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
         <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">

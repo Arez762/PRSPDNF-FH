@@ -1,6 +1,6 @@
 <!-- Section Start -->
 <section class="py-12 bg-gray-50">
-    <div class="container mx-auto text-center">
+    <div class="container text-center ">
 
         <!-- Section Title -->
         <h2 class="text-3xl font-bold text-gray-900 mb-4">
