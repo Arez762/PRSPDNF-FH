@@ -2,6 +2,12 @@
 <section class="bg-gray-100 py-12">
     <div class="container mx-auto p-4">
         <!-- Section Layout -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-[#FC6C3F] py-8">Fasilitas yang disediakan <span
+                    class="text-black">di Fajar Harapan</span></h2>
+            <p class="text-gray-700">Fajar Harapan menyediakan beberapa layanan yang dapat membantu penyandang
+                disabilitas seperti:</p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Grid of Facility Items -->
             <div class="col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

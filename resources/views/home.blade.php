@@ -15,123 +15,115 @@
     <title>Landing Page</title>
 </head>
 
+{{-- nav-start --}}
+
 <body class="bg-[#F3F4F8] font-poppins">
-    <x-nav-bar></x-nav-bar>
-    <div class="w-full bg-[#F3F4F8] lg:h-32 h-12"></div>
-    <section class="relative bg-[#F3F4F8] dark:bg-gray-900 z-10">
+    <x-navbar></x-navbar>
 
-        <div class="absolute -top-10 -left-10 z-0">
-            <div class="w-40 h-40 bg-orange-500 rounded-full"></div>
-            <div class="w-20 h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
-            <div class="w-10 h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
+    <section class="relative dark:bg-gray-900 z-10 pt-16 lg:pt-32">
+        <!-- Circles Decoration (Left) -->
+        <div class="absolute top-50 left-0 z-0">
+            <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
+            <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
+            <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
         </div>
 
-        <div class="absolute -top-0 -right-0 z-0">
-            <div class="w-40 h-40 bg-orange-500 rounded-full"></div>
-            <div class="w-10 h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
-            <div class="w-20 h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
+        <div class="absolute top-30 right-0 z-0">
+            <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
+            <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
+            <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
         </div>
 
-        <div class="relative z-10 py-16 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
+        <!-- Main Content -->
+        <div class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
             <h1
-                class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
+                class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
                 Langkah Kecil Menuju Kemandirian Besar
-                <span class="block mt-4 text-[#FC6C3F]">Bersama Kami di Fajar Harapan!</span>
+                <span class="block mt-4 text-orange-500">Bersama Kami di Fajar Harapan!</span>
             </h1>
+
             <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 Dengan kasih dan kepedulian, kami membimbing setiap individu untuk bangkit dari keterbatasan, berdaya
                 secara sosial dan ekonomi, serta menjalani hidup yang bermartabat.
             </p>
-            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+
+            <div class="flex flex-col lg:mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                 <a href="#"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-[#FC6C3F] bg-white border border-[#FC6C3F] rounded-lg shadow-md hover:bg-orange-50 focus:ring-4 focus:ring-orange-200">
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-orange-500 bg-white border border-orange-500 rounded-lg shadow-md hover:bg-orange-50 focus:ring-4 focus:ring-orange-200">
                     Lihat Layanan
                 </a>
                 <a href="#"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white bg-[#FC6C3F] rounded-lg shadow-md hover:bg-orange-500 focus:ring-4 focus:ring-orange-300">
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 focus:ring-4 focus:ring-orange-300">
                     Daftar Sekarang
                 </a>
             </div>
         </div>
+
+        <!-- Gambar dengan margin lebih kecil di mobile -->
         <img src="{{ asset('Image/image.png') }}" alt="Children Image" class="w-screen h-auto object-cover lg:mb-8">
     </section>
 
-    {{-- start tentang kami  --}}
-    <section class="py-12 mt-8" data-aos="fade-up" data-aos-once="true">
+    {{-- about start --}}
+    <section class=" py-8 lg:mt-8 mt-0" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <p class="mt-2 text-3xl leading-9 font-extrabold text-[#FC6C3F] sm:text-4xl">
-                    Fajar Harapan
+                <p class=" lg:text-3xl text-xl leading-9 font-extrabold text-[#FC6C3F]">
+                    Panti Rehabilitasi Sosial Penyandang Disabilitas Netra dan Fisik Fajar Harapan
                 </p>
-                <p class="mt-4 text-lg leading-7 text-[#21272A]">
-                    Fajar Harapan adalah panti rehabilitasi sosial yang berkomitmen untuk mendukung penyandang
-                    disabilitas meraih kemandirian. Melalui layanan rehabilitasi komprehensif, pendidikan, dan
-                    pemberdayaan, kami membantu individu mengembangkan potensi mereka dan berkontribusi secara aktif di
-                    masyarakat.
+                <p class="mt-4 lg:text-lg text-sm leading-7 text-[#21272A]">
+                    Merupakan Unit Pelaksana Teknis Daerah Dinas Sosial Provinsi Kalimantan Selatan yang bertugas
+                    Melaksanakan kegiatan operasional Dinas Sosial di bidang pelayanan, bimbingan, dan rehabilitasi
+                    sosial yang bersifat kuratif, rehabilitatif, promotif dalam bentuk bimbingan pengetahuan dasar
+                    pendidikan, fisik, mental, sosial, pelatihan keterampilan, resosialisasi bimbingan lanjut serta
+                    pelayanan rujukan bagi para penyandang disabilitas sensorik netra dan multi layanan disabilitas
+                    Fisik agar mampu mandiri dan berperan aktif dalam kehidupan bermasyarakat.
                 </p>
             </div>
             <div class="container mx-auto p-6 flex flex-wrap justify-center">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                    <img src="{{ asset('icon/R.png') }}" alt="Visi dan Misi"
-                        class="rounded-t-lg w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
-                        <h3 class="text-xl font-semibold mb-6">Visi dan Misi</h3>
-                        <p class="text-[#21272A] mb-6">Egestas elit dui scelerisque eu et purus aliquam vitae
-                            habitasse...
-                        </p>
-                        <div class="flex justify-center">
-                            <a href="#"
-                                class="inline-block bg-[#FC6C3F] text-white p-5 rounded-full hover:bg-[#d16c4d]">
-                                <img src="{{ asset('icon/Vector.png') }}" alt="" class="w-2 h-2 mx-auto">
-                            </a>
+                <a class="block" href="/profile-visidanmisi">
+                    <div
+                        class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
+                        <img src="{{ asset('Image/prspdnf_1.jpg') }}" alt="Visi dan Misi"
+                            class="rounded-t-lg w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
+                            <h3 class="text-xl font-semibold mb-6">Visi dan Misi</h3>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                    <img src="{{ asset('icon/historical_3107.png') }}" alt="Sejarah"
-                        class="rounded-t-lg w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
-                        <h3 class="text-xl font-semibold mb-6">Sejarah</h3>
-                        <p class="text-[#21272A] mb-6">Egestas elit dui scelerisque eu et purus aliquam vitae
-                            habitasse...
-                        </p>
-                        <div class="flex justify-center">
-                            <a href="#"
-                                class="inline-block bg-[#FC6C3F] text-white p-5 rounded-full hover:bg-[#d16c4d]">
-                                <img src="{{ asset('icon/Vector.png') }}" alt="" class="w-2 h-2 mx-auto">
-                            </a>
+                <a class="block" href="/profile-sejarah">
+                    <div
+                        class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
+                        <img src="{{ asset('Image/prspdnf_2.jpg') }}" alt="Sejarah"
+                            class="rounded-t-lg w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
+                            <h3 class="text-xl font-semibold mb-6">Sejarah</h3>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                    <img src="{{ asset('icon/struktur.png') }}" alt="Tenaga Ahli"
-                        class="rounded-t-lg w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
-                        <h3 class="text-xl font-semibold mb-6">Tenaga Ahli</h3>
-                        <p class="text-[#21272A] mb-6">Egestas elit dui scelerisque eu et purus aliquam vitae
-                            habitasse...
-                        </p>
-                        <div class="flex justify-center">
-                            <a href="#"
-                                class="inline-block bg-[#FC6C3F] text-white p-5 rounded-full hover:bg-[#d16c4d]">
-                                <img src="{{ asset('icon/Vector.png') }}" alt="" class="w-2 h-2 mx-auto">
-                            </a>
+                <a class="block" href="/profile-tenagaahli">
+                    <div
+                        class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
+                        <img src="{{ asset('Image/organization-level-1.png') }}" alt="Tenaga Ahli"
+                            class="rounded-t-lg w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
+                            <h3 class="text-xl font-semibold mb-6">Tenaga Ahli</h3>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+
         </div>
     </section>
-    {{-- end tentang kami --}}
+    {{-- about end --}}
 
-    <!-- Section About Start -->
-    <section id="count-section" class="py-12" data-aos="fade-up" data-aos-once="true">
+    <!-- Section why Start -->
+    <section id="count-section" class="lg:py-12" data-aos="fade-up">
         <div class="container mx-auto px-4 text-center">
 
             <!-- Section Title -->
@@ -153,7 +145,7 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="https://via.placeholder.com/32" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/mood-check.png') }}" alt="Icon" class="w-8 h-8">
                     </div>
                     <div class="text-left">
                         <h3 class="text-xl font-semibold text-gray-900" id="count1">60</h3>
@@ -165,7 +157,7 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="https://via.placeholder.com/32" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/users-group.png') }}" alt="Icon" class="w-8 h-8">
                     </div>
                     <div class="text-left">
                         <h3 class="text-xl font-semibold text-gray-900" id="count2">60</h3>
@@ -177,10 +169,10 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="https://via.placeholder.com/32" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/Vector_House.png') }}" alt="Icon" class="w-8 h-8">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count3">11</h3>
+                        <h3 class="text-xl font-semibold text-gray-900" id="count3">5</h3>
                         <p class="text-gray-600">Fasilitas Rumah Disabilitas</p>
                     </div>
                 </div>
@@ -189,7 +181,7 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="https://via.placeholder.com/32" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/list-check.png') }}" alt="Icon" class="w-8 h-8">
                     </div>
                     <div class="text-left">
                         <h3 class="text-xl font-semibold text-gray-900" id="count4">7</h3>
@@ -199,7 +191,7 @@
             </div>
         </div>
     </section>
-    {{-- end about --}}
+    {{-- end why --}}
 
     {{-- service start --}}
     <section>
@@ -207,151 +199,345 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Left Image Section -->
-                <div class="flex items-center justify-center" data-aos="fade-right" data-aos-once="true">
+                <div class="flex items-center justify-center rounded-xl shadow-xl" data-aos="fade-down">
                     <div class="w-full h-full bg-gray-200 flex items-center justify-center">
                         <!-- Placeholder for Image -->
-                        <span class="text-gray-500">Image Placeholder</span>
+                        <img src="{{ asset('Image/DSC06900.JPG') }}" alt=""
+                            class="w-full h-full rounded-lg shadow-md">
                     </div>
                 </div>
 
                 <!-- Right Content Section -->
-                <div class="bg-white p-6 shadow-lg rounded-lg text-center" data-aos="fade-left" data-aos-once="true">
-                    <h2 class="text-2xl font-bold mb-4">Layanan apa saja yang ada di Fajar Harapan?</h2>
+                <div class="bg-white p-6 shadow-lg rounded-lg text-center" data-aos="fade-up">
+                    <h2 class="text-2xl font-bold mb-4">Program rehabilitasi yang ada di Fajar Harapan?</h2>
                     <p class="text-gray-600 mb-6">
-                        Fajar harapan menyediakan beberapa layanan yang dapat membantu penyandang disabilitas seperti:
+                        Fajar harapan menyediakan beberapa program yang dapat membantu penyandang disabilitas seperti:
                     </p>
 
                     <!-- Accordion Section -->
                     <div class="space-y-2">
-                        <div class="flex items-center border-2 border-[#FC6C3F] rounded-lg px-4 py-2 bg-[#FC6C3F] cursor-pointer>
-                        <button class="w-full
-                            text-left bg-orange-500 text-white py-2 px-4 border-2 border-[#FC6C3F] rounded-lg
-                            focus:outline-none">
-                            <img src="{{ asset('icon/chevron-down.png') }}" alt="Dropdown Icon" class="h-6 w-6 mr-2">
-                            Layanan Panti 1
-                            </button>
-                        </div>
-                        <div class="flex items-center border-2 border-[#FC6C3F] rounded-lg px-4 py-2 bg-red-50 cursor-pointer>
-                        <button class="w-full
-                            text-left bg-white text-gray-800 py-2 px-4 border-2 border-[#FC6C3F] rounded-lg
-                            focus:outline-none">
-                            <img src="{{ asset('icon/chevron-down.png') }}" alt="Dropdown Icon" class="h-6 w-6 mr-2">
-                            Layanan Panti 2
-                            </button>
-                        </div>
-                        <div class="flex items-center border-2 border-[#FC6C3F] rounded-lg px-4 py-2 bg-red-50 cursor-pointer>
-                        <button class="w-full
-                            text-left bg-white text-gray-800 py-2 px-4 border-2 border-[#FC6C3F] rounded-lg
-                            focus:outline-none">
-                            <img src="{{ asset('icon/chevron-down.png') }}" alt="Dropdown Icon" class="h-6 w-6 mr-2">
-                            Layanan Panti 3
-                            </button>
-                        </div>
-                        <div class="flex items-center border-2 border-[#FC6C3F] rounded-lg px-4 py-2 bg-red-50 cursor-pointer>
-                        <button class="w-full
-                            text-left bg-white text-gray-800 py-2 px-4 border-2 border-[#FC6C3F] rounded-lg
-                            focus:outline-none">
-                            <img src="{{ asset('icon/chevron-down.png') }}" alt="Dropdown Icon"
-                                class="h-6 w-6 mr-2">
-                            Layanan Panti 4
-                            </button>
-                        </div>
-                        <div class="flex items-center border-2 border-[#FC6C3F] rounded-lg px-4 py-2 bg-red-50 cursor-pointer>
-                        <button class="w-full
-                            text-left bg-white text-gray-800 py-2 px-4 border-2 border-[#FC6C3F] rounded-lg
-                            focus:outline-none">
-                            <img src="{{ asset('icon/chevron-down.png') }}" alt="Dropdown Icon"
-                                class="h-6 w-6 mr-2">
-                            Layanan Panti 5
-                            </button>
-                        </div>
-                        <div class="flex items-center border-2 border-[#FC6C3F] rounded-lg px-4 py-2 bg-red-50 cursor-pointer>
-                        <button class="w-full
-                            text-left bg-white text-gray-800 py-2 px-4 border-2 border-[#FC6C3F] rounded-lg
-                            focus:outline-none">
-                            <img src="{{ asset('icon/chevron-down.png') }}" alt="Dropdown Icon"
-                                class="h-6 w-6 mr-2">
-                            Layanan Panti 6
-                            </button>
-                        </div>
-                    </div>
+                        <!-- Button 1 -->
+                        <button id="dropdownLeftEndButton1" data-dropdown-toggle="dropdownLeftEnd1"
+                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            type="button">
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                            <p class="ml-4">Bimbingan Fisik</p>
+                        </button>
 
-                    <div class="mt-4">
+                        <div id="dropdownLeftEnd1"
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownLeftEndButton1">
+                                <li>
+                                    <p class="block px-4 py-2">Olahraga Kesehatan Jasmani</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Olahraga Prestasi (Atletik, Judo, Renang, dan Tenis Meja
+                                        Netra)</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Button 2 -->
+                        <button id="dropdownLeftEndButton2" data-dropdown-toggle="dropdownLeftEnd2"
+                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            type="button">
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                            <p class="ml-4">Bimbingan Mental Spiritual</p>
+                        </button>
+
+                        <div id="dropdownLeftEnd2"
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownLeftEndButton2">
+                                <li>
+                                    <p class="block px-4 py-2">Baca Tulis Al Qur'an</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Pembacaan Maulid</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Ceramah Agama</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Tuntunan Ibadah</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Button 3 -->
+                        <button id="dropdownLeftEndButton3" data-dropdown-toggle="dropdownLeftEnd3"
+                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            type="button">
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                            <p class="ml-4">Bimbingan Sosial</p>
+                        </button>
+
+                        <div id="dropdownLeftEnd3"
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownLeftEndButton3">
+                                <li>
+                                    <p class="block px-4 py-2">Orientasi mobilitas</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Activity of Daily Living (ADL)</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Pembinaan Kepercayaan Diri dan Motivasi</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Button 4 -->
+                        <button id="dropdownLeftEndButton4" data-dropdown-toggle="dropdownLeftEnd4"
+                            class="flex me-3 mb-3 md:mb-0 lg:font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            type="button">
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                            <p class="ml-4">Bimbingan Keterampilan/Vokasional</p>
+                        </button>
+
+                        <div id="dropdownLeftEnd4"
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownLeftEndButton4">
+                                <li>
+                                    <p class="block px-4 py-2">Menjahit</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Komputer</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Tata Boga</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Budidaya Ikan</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Sport Massage dan Shiatsu</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">Music</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Button 5 -->
+                        <button id="dropdownLeftEndButton5" data-dropdown-toggle="dropdownLeftEnd5"
+                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            type="button">
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                            <p class="ml-4">Pendidikan Formal</p>
+                        </button>
+
+                        <div id="dropdownLeftEnd5"
+                            class="hidden absolute md:left-0 md:top-full z-20 md:mt-2 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownLeftEndButton5">
+                                <li>
+                                    <p class="block px-4 py-2">SDLB</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">SMPLB</p>
+                                </li>
+                                <li>
+                                    <p class="block px-4 py-2">SMALB</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    {{-- <div class="mt-4">
                         <button class="bg-[#7F56D9] text-white py-2 px-4 rounded-lg focus:outline-none">
                             Lihat Lebih Banyak
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
-
             </div>
         </div>
     </section>
     {{-- service end     --}}
 
-    {{-- feature start --}}
-    <section class="bg-gray-100 py-12">
+    {{-- fasilitas start --}}
+    <section class="lg:pt-8" data-aos="fade">
         <div class="container mx-auto p-4">
-            <!-- Title Section -->
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-[#FC6C3F] py-8">Fasilitas yang disediakan <span
                         class="text-black">di Fajar Harapan</span></h2>
                 <p class="text-gray-700">Fajar Harapan menyediakan beberapa layanan yang dapat membantu penyandang
                     disabilitas seperti:</p>
             </div>
-
             <!-- Section Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center">
                 <!-- Grid of Facility Items -->
-                <div class="col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="col-span-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
                     <!-- Facility Item -->
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/office-building.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Gedung Perkantoran</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/school.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700 text-sm">Gedung Sekolah Luar Biasa</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/hotels.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700 text-sm">Gedung Asrama Putra</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/mosque.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Masjid</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/government.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Aula</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/musical-note (1).png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Ruang Musik</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/fork.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Ruang Makan</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/computer.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700 text-xs">Laboratorium Komputer Braille</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/dumbbell.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Ruang Fitness</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/open-book.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Perpustakaan</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/clinic.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Klinik Kesehatan</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/car.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Mobil Operasional</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
                     </div>
 
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
+                    <div class="hidden lg:flex">
                     </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/building.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Gedung Diklat</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
                     </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
+                    
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/stay-house.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Guest House</h3>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
                     </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
-                    </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
-                    </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
-                    </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
-                    </div>
-
-                    <div class="p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105">
-                        <div class="w-full h-24 bg-gray-300 rounded mb-2"></div>
-                        <h3 class="text-gray-700">Fasilitas 1</h3>
-                    </div>
+                    
                 </div>
-
                 <!-- Detail Section -->
-                <div class="col-span-1 p-4 bg-white rounded-lg shadow">
+                {{-- <div class="col-span-1 p-4 bg-white rounded-lg shadow">
                     <div class="w-full h-80 bg-gray-300 rounded mb-4"></div>
                     <h3 class="text-xl font-semibold mb-2">Fasilitas 1</h3>
                     <p class="text-gray-600 mb-4">
@@ -359,21 +545,21 @@
                         vestibulum. Nam elit tincidunt urna non vulputate accumsan.
                     </p>
                     <a href="#" class="text-indigo-600 font-semibold">Lihat dalam 360° &rarr;</a>
-                </div>
+                </div> --}}
             </div>
 
             <!-- Load More Button -->
-            <div class="flex justify-center mt-6">
+            {{-- <div class="flex justify-center mt-6">
                 <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
                     Lihat Lebih Banyak
                 </button>
-            </div>
+            </div> --}}
         </div>
     </section>
-    {{-- feature end --}}
+    {{-- fasilitas end --}}
 
-    {{-- galery start --}}
-    <div class="bg-gray-100" data-aos="fade" data-aos-once="true">
+    {{-- gallery start --}}
+    <div data-aos="fade">
         <div class="container mx-auto px-4 py-8 text-center justify-center lg:p-28">
             <h2 class="text-3xl font-extrabold text-gray-900 mb-12">
                 Jelajahi momen-momen inspiratif di <span class="text-orange-500">Fajar Harapan!</span>
@@ -478,25 +664,19 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-10">
-                <a href="#"
-                    class="px-6 py-3 bg-purple-600 text-white font-semibold rounded-md shadow-md hover:bg-purple-700 transition duration-300">
-                    Eksplor Galeri
-                </a>
-            </div>
         </div>
     </div>
-    {{-- galery end --}}
+    {{-- gallery end --}}
 
     {{-- news start --}}
-    <div class="container mx-auto py-8 px-4">
+    <div id="section-berita" class="container mx-auto py-8 px-4" data-aos="fade-up">
         <!-- Title -->
-        <h1 class="text-3xl font-bold text-center w-full mb-8 lg:mb-16" data-aos="fade" data-aos-once="true">
+        <h1 class="text-3xl font-bold text-center w-full mb-8 lg:mb-16">
             Ketahui kegiatan-kegiatan apa saja yang sedang berlangsung di Fajar Harapan
         </h1>
 
         <!-- Grid layout for Trending and Events -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-once="true">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
             <!-- Trending Card -->
             <div class="col-span-2">
                 <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
@@ -509,7 +689,7 @@
                             class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
                             <div>
-                                <h2 class="text-white text-2xl font-semibold mb-2">
+                                <h2 class="text-white lg:text-2xl font-semibold mb-2">
                                     Pelatihan Keterampilan Baru untuk Penyandang Disabilitas di Fajar Harapan
                                 </h2>
                                 <p class="text-sm text-white mb-4">25 September 2024</p>
@@ -522,10 +702,8 @@
                 </div>
             </div>
 
-
-
             <!-- List of Event Cards -->
-            <div class="col-span-2 space-y-4" data-aos="fade-down" data-aos-once="true">
+            <div class="col-span-2 space-y-4">
                 <!-- Event Card 1 -->
                 <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
                     <div class="bg-gray-300 w-20 h-20 flex-shrink-0">
@@ -593,26 +771,25 @@
         </div>
 
         <!-- "Berita Lainnya" Button -->
-        <div class="text-center mt-8">
+        <div class="text-right mt-8">
             <button class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition">
                 Berita Lainnya
             </button>
         </div>
     </div>
-    {{-- news end     --}}
+    {{-- news end --}}
 
-    <x-review></x-review>
+    @include('components.review')
 
-    <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-lg mx-6 lg:mx-40 mb-12" data-aos="fade"
-        data-aos-once="true">
+    <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-lg mx-6 lg:mx-40 mb-8" data-aos="fade">
         <div class="flex lg:w-1/2 w-full lg:h-auto lg:bm-0 rounded-lg">
             <img src="{{ asset('icon/dd.png') }}" alt="" class="w-full h-96 object-cover rounded-l-lg">
         </div>
         <div class="lg:w-1/2 w-full text-white rounded-lg lg:px-12 p-6 lg:py-0">
-            <h2 class="text- lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
+            <h2 class="text-sm lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
                 Kami adalah jawaban terbaik yang pernah Anda temukan
             </h2>
-            <h1 class="text-2xl lg:text-3xl font-bold text-center lg:text-left my-6">
+            <h1 class="text-lg lg:text-3xl font-bold text-center lg:text-left my-6">
                 Tunggu apalagi? <br> <span class="text-orange-400">Segera bergabung</span> bersama keluarga besar kami
                 sekarang dan rasakan perubahan yang terjadi di hidup Anda!
             </h1>
@@ -624,81 +801,221 @@
         </div>
     </div>
 
-    {{-- partnership start --}}
-    <section data-aos="fade-up" data-aos-once="true">
-        <div class="w-full text-center text-4xl font-semibold mt-12">Kerjasama</div>
-        <div class="relative flex overflow-hidden space-x-16 group my-12">
+    {{-- kerjasama --}}
+    <section class="pt-2" data-aos="fade-up">
+        <div class="w-full text-center text-xl md:text-4xl font-semibold mt-3 md:mt-12">Kerjasama</div>
+        <div class="relative flex overflow-hidden space-x-8 md:space-x-16 group my-8 md:my-12">
             <!-- Left Blur -->
             <div
-                class="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-white to-transparent pointer-events-none blur-[1px] z-10">
+                class="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent pointer-events-none blur-[1px] z-10">
             </div>
 
-            <!-- Scrolling Images -->
-            <div class="flex space-x-16 animate-loop-scroll group-hover:paused">
+            <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused">
                 <img loading="lazy" src="{{ asset('logo-sponsor/LOGO KABUPATEN BALANGAN.png') }}"
-                    class="max-w-none w-42 h-32" alt="image0">
+                    class="max-w-none h-16 lg:h-32" alt="image0">
                 <img loading="lazy"
                     src="{{ asset('logo-sponsor/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}"
-                    class="max-w-none w-42 h-32" alt="image1">
+                    class="max-w-none h-16 lg:h-32" alt="image1">
                 <img loading="lazy" src="{{ asset('logo-sponsor/Kab Hulu Sungai Tengah.png') }}"
-                    class="max-w-none w-42 h-32" alt="image2">
+                    class="max-w-none h-16 lg:h-32" alt="image2">
                 <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}"
-                    class="max-w-none w-42 h-32" alt="image3">
+                    class="max-w-none h-16 lg:h-32" alt="image3">
                 <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru-removebg-preview.png') }}"
-                    class="max-w-none w-42 h-32" alt="image4">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}" class="max-w-none w-42 h-32"
-                    alt="image5">
+                    class="max-w-none h-16 lg:h-32" alt="image4">
+                <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}"
+                    class="max-w-none h-16 lg:h-32" alt="image5">
                 <img loading="lazy" src="{{ asset('logo-sponsor/LOGO_KAB_BANJAR.png') }}"
-                    class="max-w-none w-42 h-32" alt="image6">
+                    class="max-w-none h-16 lg:h-32" alt="image6">
                 <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Kotabaru.png') }}"
-                    class="max-w-none w-42 h-32" alt="image7">
+                    class="max-w-none h-16 lg:h-32" alt="image7">
                 <img loading="lazy" src="{{ asset('logo-sponsor/kabupaten barito kuala.png') }}"
-                    class="max-w-none w-42 h-32" alt="image8">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah_bumbu.png') }}" class="max-w-none w-42 h-32"
+                    class="max-w-none h-16 lg:h-32" alt="image8">
+                <img loading="lazy" src="{{ asset('logo-sponsor/tanah_bumbu.png') }}"
+                    class="max-w-none h-16 lg:h-32" alt="image9">
+                <img loading="lazy" src="{{ asset('logo-sponsor/tanah-laut.png') }}" class="max-w-none h-16 lg:h-32"
                     alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah-laut.png') }}" class="max-w-none w-42 h-32"
-                    alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tabalong.png') }}" class="max-w-none w-42 h-32"
+                <img loading="lazy" src="{{ asset('logo-sponsor/tabalong.png') }}" class="max-w-none h-16 lg:h-32"
                     alt="image9">
             </div>
 
             <!-- Hidden Scrolling Images for Loop -->
-            <div class="flex animate-loop-scroll space-x-16 group-hover:paused" aria-hidden="true">
+            <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused" aria-hidden="true">
                 <img loading="lazy" src="{{ asset('logo-sponsor/LOGO KABUPATEN BALANGAN.png') }}"
-                    class="max-w-none w-42 h-32" alt="image0">
+                    class="max-w-none h-16 lg:h-32" alt="image0">
                 <img loading="lazy"
                     src="{{ asset('logo-sponsor/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}"
-                    class="max-w-none w-42 h-32" alt="image1">
+                    class="max-w-none h-16 lg:h-32" alt="image1">
                 <img loading="lazy" src="{{ asset('logo-sponsor/Kab Hulu Sungai Tengah.png') }}"
-                    class="max-w-none w-42 h-32" alt="image2">
+                    class="max-w-none h-16 lg:h-32" alt="image2">
                 <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}"
-                    class="max-w-none w-42 h-32" alt="image3">
+                    class="max-w-none h-16 lg:h-32" alt="image3">
                 <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru-removebg-preview.png') }}"
-                    class="max-w-none w-42 h-32" alt="image4">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}" class="max-w-none w-42 h-32"
-                    alt="image5">
+                    class="max-w-none h-16 lg:h-32" alt="image4">
+                <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}"
+                    class="max-w-none h-16 lg:h-32" alt="image5">
                 <img loading="lazy" src="{{ asset('logo-sponsor/LOGO_KAB_BANJAR.png') }}"
-                    class="max-w-none w-42 h-32" alt="image6">
+                    class="max-w-none h-16 lg:h-32" alt="image6">
                 <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Kotabaru.png') }}"
-                    class="max-w-none w-42 h-32" alt="image7">
+                    class="max-w-none h-16 lg:h-32" alt="image7">
                 <img loading="lazy" src="{{ asset('logo-sponsor/kabupaten barito kuala.png') }}"
-                    class="max-w-none w-42 h-32" alt="image8">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah_bumbu.png') }}" class="max-w-none w-42 h-32"
+                    class="max-w-none h-16 lg:h-32" alt="image8">
+                <img loading="lazy" src="{{ asset('logo-sponsor/tanah_bumbu.png') }}"
+                    class="max-w-none h-16 lg:h-32" alt="image9">
+                <img loading="lazy" src="{{ asset('logo-sponsor/tanah-laut.png') }}" class="max-w-none h-16 lg:h-32"
                     alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah-laut.png') }}" class="max-w-none w-42 h-32"
-                    alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tabalong.png') }}" class="max-w-none w-42 h-32"
+                <img loading="lazy" src="{{ asset('logo-sponsor/tabalong.png') }}" class="max-w-none h-16 lg:h-32"
                     alt="image9">
             </div>
-            <!-- Right Blur -->
+
+
             <div
-                class="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-white to-transparent pointer-events-none blur-[1px] z-10">
+                class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent pointer-events-none blur-[1px] z-10">
             </div>
         </div>
     </section>
-    {{-- partnership end --}}
+    {{-- kerjasama end --}}
 
-    <x-footer></x-footer>
+    {{-- footer start --}}
+    <footer class="bg-[#697077] dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <!-- Logo Section -->
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <!-- Logo with responsive sizing -->
+                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
+                        alt="PRSPDNF Logo" />
+
+                    <div>
+                        <!-- Text with responsive font sizes -->
+                        <span class="flex uppercase text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
+                        <span class="flex font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
+                    </div>
+                </a>
+                <!-- Extended Horizontal Line -->
+                <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8 w-full" />
+            </div>
+
+            <div class="flex flex-col md:flex-row md:justify-between">
+                <!-- Google Maps Iframe Section -->
+                <div class="flex flex-col lg:flex-row gap-6 my-4 ">
+                    <!-- Map Section -->
+                    <div class="relative w-full h-48 lg:w-64 lg:h-64">
+                        <iframe class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1636.6910057401503!2d114.84816214009834!3d-3.4349755711262553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de68107a087de0f%3A0xc044bbadaaf31076!2sPanti%20Rehabilitasi%20Sosial%20Penyandang%20Disabilitas%20Netra%20dan%20Fisik%20(PRSPDNF)%20Fajar%20Harapan!5e0!3m2!1sid!2sid!4v1727917508162!5m2!1sid!2sid"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                
+                    <!-- Address and Contact Information Section -->
+                    <div class="flex flex-col text-sm w-64 text-white">
+                        <p class=" font-semibold">Alamat Lengkap:</p>
+                        <p>Jl. A. Yani, Sungai Paring, Kec. Martapura, Kabupaten Banjar, Kalimantan Selatan 70714</p>
+                        
+                        <p class="mt-4  font-semibold">Kontak:</p>
+                        <p>Telepon: (0511) 123-4567</p>
+                
+                        <p class="mt-4  font-semibold">Email:</p>
+                        <a href="">
+                            <p>info@prspdnf-fajarharapan.co.id</p>
+                        </a>
+                    </div>
+                </div>
+                
+
+
+                <!-- Menus (Resources, Follow Us, Legal) -->
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4 mt-4 md:mt-0 md:ml-8 text-left pt-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Profile</h2>
+                        <ul class="text-white dark:text-white font-medium">
+                            <li class="mb-4">
+                                <a href="/profile-visidanmisi" class="hover:underline">Visi & Misi</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/profile-sejarah" class="hover:underline">Sejarah</a>
+                            </li>
+                            <li>
+                                <a href="/profile-tenagaahli" class="hover:underline">Tenaga Ahli</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Layanan</h2>
+                        <ul class="text-white dark:text-white font-medium">
+                            <li class="mb-4">
+                                <a href="/pelayanan-persyaratan"
+                                    class="hover:underline">Persyaratan</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/pelayanan-alur" class="hover:underline">Alur Pelayanan</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Gallery</h2>
+                        <ul class="text-white dark:text-white font-medium">
+                            <li class="mb-4">
+                                <a href="/gallery-foto" class="hover:underline">Foto</a>
+                            </li>
+                            <li>
+                                <a href="/gallery-video" class="hover:underline">Video</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Horizontal Icons Section for Join Us -->
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Join us</h2>
+                        <ul class="flex space-x-5">
+                            <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 8 19">
+                                    <path fill-rule="evenodd"
+                                        d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Facebook page</span>
+                            </a>
+                            <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 17">
+                                    <path fill-rule="evenodd"
+                                        d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Twitter page</span>
+                            </a>
+                            <a href="https://www.instagram.com/prspdnffajarharapan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+                                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Instagram account</span>
+                            </a>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-white sm:text-center dark:text-white">© 2024 <a href="#"
+                        class="hover:underline">Magang PRSPDNF FH</a>@ All Rights Reserved.</span>
+                <div class="text-white flex mt-4 sm:justify-center sm:mt-0 space-x-4">
+                    <a href="/" class="hover:underline">Home</a>
+                    <a href="#" class="hover:underline">About us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{-- footer end --}}
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>

@@ -14,7 +14,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="relative z-10 py-16 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
+    <div class="relative z-10 py-16 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12 ">
         <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
             Langkah Kecil Menuju Kemandirian Besar 
             <span class="block mt-4 text-orange-500">Bersama Kami di Fajar Harapan!</span>
