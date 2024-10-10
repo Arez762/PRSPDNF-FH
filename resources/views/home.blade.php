@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet" />
+    <link href="../path/to/src/pagedone.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +15,16 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     @vite('resources/css/app.css')
-    <title>Landing Page</title>
+    <title>PRSPDNF FH</title>
 </head>
 
 {{-- nav-start --}}
 
 <body class="bg-[#F3F4F8] font-poppins">
-    <x-navbar></x-navbar>
 
-    <section class="relative dark:bg-gray-900 z-10 pt-16 lg:pt-32">
+    <x-nav-v2></x-nav-v2>
+
+    <section class="relative bg-[#F3F4F8] dark:bg-gray-900 z-10 pt-16 lg:pt-32">
         <!-- Circles Decoration (Left) -->
         <div class="absolute top-50 left-0 z-0">
             <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
@@ -35,7 +39,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
+        <div class="relative  z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
             <h1
                 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
                 Langkah Kecil Menuju Kemandirian Besar
@@ -48,14 +52,14 @@
             </p>
 
             <div class="flex flex-col lg:mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-orange-500 bg-white border border-orange-500 rounded-lg shadow-md hover:bg-orange-50 focus:ring-4 focus:ring-orange-200">
+                <a href="/pelayanan-alur"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-orange-500 bg-white border border-orange-500 rounded-lg shadow-md hover:bg-orange-100 focus:ring-4 focus:ring-orange-200">
                     Lihat Layanan
                 </a>
-                <a href="#"
+                {{-- <a href="#"
                     class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 focus:ring-4 focus:ring-orange-300">
                     Daftar Sekarang
-                </a>
+                </a> --}}
             </div>
         </div>
 
@@ -149,7 +153,7 @@
                     </div>
                     <div class="text-left">
                         <h3 class="text-xl font-semibold text-gray-900" id="count1">60</h3>
-                        <p class="text-gray-600">Pelanggan Puas</p>
+                        <p class="text-gray-600">client </p>
                     </div>
                 </div>
 
@@ -172,7 +176,7 @@
                         <img src="{{ asset('icon/Vector_House.png') }}" alt="Icon" class="w-8 h-8">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count3">5</h3>
+                        <h3 class="text-xl font-semibold text-gray-900" id="count3">14</h3>
                         <p class="text-gray-600">Fasilitas Rumah Disabilitas</p>
                     </div>
                 </div>
@@ -184,7 +188,7 @@
                         <img src="{{ asset('icon/list-check.png') }}" alt="Icon" class="w-8 h-8">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count4">7</h3>
+                        <h3 class="text-xl font-semibold text-gray-900" id="count4">18</h3>
                         <p class="text-gray-600">Program Pemberdayaan</p>
                     </div>
                 </div>
@@ -194,28 +198,28 @@
     {{-- end why --}}
 
     {{-- service start --}}
-    <section>
+    <section class="relative z-40">
         <div class="container mx-auto py-8 px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Left Image Section -->
-                <div class="flex items-center justify-center rounded-xl shadow-xl" data-aos="fade-down">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+                <div class="flex items-center justify-center rounded-xl" data-aos="fade-down">
+                    <div class="w-full h-full flex items-center justify-center">
                         <!-- Placeholder for Image -->
                         <img src="{{ asset('Image/DSC06900.JPG') }}" alt=""
-                            class="w-full h-full rounded-lg shadow-md">
+                            class="w-full h-full rounded-tl-[80px] rounded-br-[80px] shadow-md">
                     </div>
                 </div>
 
                 <!-- Right Content Section -->
-                <div class="bg-white p-6 shadow-lg rounded-lg text-center" data-aos="fade-up">
+                <div class="bg-white p-6 shadow-lg rounded-lg text-center relative z-50" data-aos="fade-up">
                     <h2 class="text-2xl font-bold mb-4">Program rehabilitasi yang ada di Fajar Harapan?</h2>
                     <p class="text-gray-600 mb-6">
                         Fajar harapan menyediakan beberapa program yang dapat membantu penyandang disabilitas seperti:
                     </p>
 
                     <!-- Accordion Section -->
-                    <div class="space-y-2">
+                    <div class="space-y-2 relative">
                         <!-- Button 1 -->
                         <button id="dropdownLeftEndButton1" data-dropdown-toggle="dropdownLeftEnd1"
                             class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
@@ -229,20 +233,41 @@
                         </button>
 
                         <div id="dropdownLeftEnd1"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownLeftEndButton1">
-                                <li>
-                                    <p class="block px-4 py-2">Olahraga Kesehatan Jasmani</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Olahraga Prestasi (Atletik, Judo, Renang, dan Tenis Meja
-                                        Netra)</p>
-                                </li>
-                            </ul>
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 rounded-b-xl">
+                            <div class="border-2 rounded-b-xl border-[#FC6C3F]">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
+                                    aria-labelledby="dropdownLeftEndButton1">
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Olahraga Kesehatan Jasmani</p>
+                                        <p class="block px-4 pb-1">Program ini bertujuan untuk menjaga kebugaran tubuh
+                                            dan kesehatan jasmani
+                                            melalui aktivitas fisik teratur, seperti senam atau latihan ringan.</p>
+                                    </li>
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Olahraga Prestasi (Atletik, Judo, Renang,
+                                            dan Tenis Meja Netra)</p>
+                                        <div class="block px-4 pb-1 mt-1">
+                                            <ul class="list-disc pl-5">
+                                                <li><strong>Atletik:</strong> Latihan dan pengembangan kemampuan dasar
+                                                    atletik seperti lari,
+                                                    lompat, dan lempar.</li>
+                                                <li><strong>Judo:</strong> Latihan teknik-teknik bela diri judo yang
+                                                    disesuaikan dengan kebutuhan
+                                                    peserta didik.</li>
+                                                <li><strong>Renang:</strong> Pembelajaran teknik berenang yang bertujuan
+                                                    untuk meningkatkan
+                                                    kepercayaan diri dan kemampuan berenang.</li>
+                                                <li><strong>Tenis Meja Netra:</strong> Latihan dan pengembangan
+                                                    kemampuan bermain tenis meja untuk
+                                                    peserta didik dengan gangguan penglihatan, menggunakan teknik dan
+                                                    peralatan khusus.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Button 2 -->
                         <button id="dropdownLeftEndButton2" data-dropdown-toggle="dropdownLeftEnd2"
                             class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
                             type="button">
@@ -255,25 +280,38 @@
                         </button>
 
                         <div id="dropdownLeftEnd2"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownLeftEndButton2">
-                                <li>
-                                    <p class="block px-4 py-2">Baca Tulis Al Qur'an</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Pembacaan Maulid</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Ceramah Agama</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Tuntunan Ibadah</p>
-                                </li>
-                            </ul>
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <div class="border-2 rounded-b-xl border-[#FC6C3F]">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
+                                    aria-labelledby="dropdownLeftEndButton2">
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Baca tulis Al Qur'an</p>
+                                        <p class="block px-4 pb-1">Program untuk membantu peserta didik dalam belajar
+                                            membaca dan menulis huruf hijaiyah hingga dapat membaca Al-Qur'an dengan
+                                            baik.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Pembacaan Maulid</p>
+                                        <p class="block px-4 pb-1">Kegiatan pembacaan syair-syair maulid untuk
+                                            memperdalam pemahaman sejarah dan nilai-nilai kehidupan Rasulullah.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Ceramah Agama</p>
+                                        <p class="block px-4 pb-1">Penyampaian ceramah agama untuk memperkuat keimanan
+                                            dan memberikan pemahaman yang baik mengenai ajaran agama.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Tuntunan Ibadah</p>
+                                        <p class="block px-4 pb-1">Pembinaan yang berfokus pada pengenalan dan praktik
+                                            ibadah sehari-hari seperti sholat, wudhu, dan doa.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Button 3 -->
                         <button id="dropdownLeftEndButton3" data-dropdown-toggle="dropdownLeftEnd3"
                             class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
                             type="button">
@@ -286,61 +324,90 @@
                         </button>
 
                         <div id="dropdownLeftEnd3"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownLeftEndButton3">
-                                <li>
-                                    <p class="block px-4 py-2">Orientasi mobilitas</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Activity of Daily Living (ADL)</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Pembinaan Kepercayaan Diri dan Motivasi</p>
-                                </li>
-                            </ul>
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <div class="border-2 rounded-b-xl border-[#FC6C3F]">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
+                                    aria-labelledby="dropdownLeftEndButton3">
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Orientasi Mobilitas</p>
+                                        <p class="block px-4 pb-1">Pelatihan untuk membantu peserta didik dalam
+                                            mengenali lingkungan sekitar serta mengembangkan kemampuan bergerak secara
+                                            mandiri.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Activity of Daily Living (ADL)</p>
+                                        <p class="block px-4 pb-1">Pembelajaran dan pelatihan kegiatan sehari-hari
+                                            seperti berpakaian, makan, dan menjaga kebersihan diri agar peserta didik
+                                            dapat lebih mandiri.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Pembinaan Kepercayaan Diri dan Motivasi
+                                        </p>
+                                        <p class="block px-4 pb-1">Program yang berfokus pada pengembangan rasa percaya
+                                            diri dan motivasi diri melalui kegiatan yang membangun semangat serta sikap
+                                            positif.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Button 4 -->
                         <button id="dropdownLeftEndButton4" data-dropdown-toggle="dropdownLeftEnd4"
-                            class="flex me-3 mb-3 md:mb-0 lg:font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-start items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
                             type="button">
                             <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg>
-                            <p class="ml-4">Bimbingan Keterampilan/Vokasional</p>
+                            <p class="ml-4">Bimbingan Keterampilan atau Vokasional</p>
                         </button>
 
                         <div id="dropdownLeftEnd4"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-10 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownLeftEndButton4">
-                                <li>
-                                    <p class="block px-4 py-2">Menjahit</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Komputer</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Tata Boga</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Budidaya Ikan</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Sport Massage dan Shiatsu</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">Music</p>
-                                </li>
-                            </ul>
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <div class="border-2 rounded-b-xl border-[#FC6C3F]">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
+                                    aria-labelledby="dropdownLeftEndButton4">
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Menjahit</p>
+                                        <p class="block px-4 pb-1"> Pembelajaran keterampilan menjahit untuk
+                                            menghasilkan berbagai jenis pakaian atau kerajinan tangan.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Komputer</p>
+                                        <p class="block px-4 pb-1">Pelatihan dasar penggunaan komputer dan aplikasi
+                                            yang berguna untuk menunjang keahlian di bidang teknologi informasi.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Tata Boga</p>
+                                        <p class="block px-4 pb-1">Pelatihan memasak dan menyiapkan hidangan, yang
+                                            meliputi teori dasar hingga praktik memasak berbagai jenis makanan.</p>
+                                    </li>
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Budidaya Ikan</p>
+                                        <p class="block px-4 pb-1"> Pengajaran teknik budidaya ikan yang mencakup
+                                            pemeliharaan, pemberian pakan, dan pengelolaan kolam.</p>
+                                    </li>
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Sport Massage dan Shiatsu</p>
+                                        <p class="block px-4 pb-1">Pelatihan keterampilan pijat olahraga dan teknik
+                                            shiatsu untuk meningkatkan keterampilan dalam bidang kesehatan dan
+                                            relaksasi.</p>
+                                    </li>
+                                    <li>
+                                        <p class="block px-4 py-1 underline">Musik</p>
+                                        <p class="block px-4 pb-1">Pembelajaran memainkan alat musik atau bernyanyi,
+                                            serta mengembangkan bakat seni musik peserta didik.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Button 5 -->
                         <button id="dropdownLeftEndButton5" data-dropdown-toggle="dropdownLeftEnd5"
-                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-start items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
                             type="button">
                             <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -351,35 +418,49 @@
                         </button>
 
                         <div id="dropdownLeftEnd5"
-                            class="hidden absolute md:left-0 md:top-full z-20 md:mt-2 w-80 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownLeftEndButton5">
-                                <li>
-                                    <p class="block px-4 py-2">SDLB</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">SMPLB</p>
-                                </li>
-                                <li>
-                                    <p class="block px-4 py-2">SMALB</p>
-                                </li>
-                            </ul>
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            <div class="border-2 rounded-b-xl border-[#FC6C3F]">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
+                                    aria-labelledby="dropdownLeftEndButton5">
+                                    <li>
+                                        <p class="block px-4 py-1 underline">SDLB (Sekolah Dasar Luar Biasa)</p>
+                                        <p class="block px-4 pb-1">Pendidikan dasar bagi anak berkebutuhan khusus,
+                                            memberikan pengajaran yang disesuaikan dengan kemampuan dan kebutuhan siswa.
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">SMPLB (Sekolah Menegah Pertama Luar Biasa)
+                                        </p>
+                                        <p class="block px-4 pb-1">Pendidikan tingkat menengah pertama yang memberikan
+                                            materi pelajaran dengan metode khusus agar peserta didik dapat mengembangkan
+                                            pengetahuan dan keterampilan dasar.</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="block px-4 py-1 underline">SMALB (Sekolah Menengah Atas Luar Biasa)
+                                        </p>
+                                        <p class="block px-4 pb-1">Pendidikan tingkat menengah atas yang fokus pada
+                                            persiapan peserta didik untuk memiliki pengetahuan akademis serta
+                                            keterampilan yang diperlukan di dunia kerja atau kehidupan sehari-hari.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
+
+
+                        <!-- Repeat buttons for other dropdowns (Button 2, Button 3, etc.) as necessary -->
                     </div>
-                    {{-- <div class="mt-4">
-                        <button class="bg-[#7F56D9] text-white py-2 px-4 rounded-lg focus:outline-none">
-                            Lihat Lebih Banyak
-                        </button>
-                    </div> --}}
                 </div>
             </div>
         </div>
     </section>
+
     {{-- service end     --}}
 
     {{-- fasilitas start --}}
-    <section class="lg:pt-8" data-aos="fade">
+    <section class="lg:pt-8 z-10" data-aos="fade">
         <div class="container mx-auto p-4">
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-[#FC6C3F] py-8">Fasilitas yang disediakan <span
@@ -392,149 +473,177 @@
                 <!-- Grid of Facility Items -->
                 <div class="col-span-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
                     <!-- Facility Item -->
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
                             <img src="{{ asset('icon/office-building.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Gedung Perkantoran</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/school.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700 text-sm">Gedung Sekolah Luar Biasa</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/hotels.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700 text-sm">Gedung Asrama Putra</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/mosque.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Masjid</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/government.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Aula</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/musical-note (1).png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Ruang Musik</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/fork.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Ruang Makan</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/computer.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700 text-xs">Laboratorium Komputer Braille</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/dumbbell.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Ruang Fitness</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/open-book.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Perpustakaan</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/clinic.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Klinik Kesehatan</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
-                            Lihat 360°
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
-                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/car.png') }}" alt="" class="h-20 w-auto">
-                        </div>
-                        <h3 class="text-gray-700">Mobil Operasional</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
                             Lihat 360°
                         </div>
                     </div>
 
-                    <div class="hidden lg:flex">
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/school.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700 text-sm">Gedung Sekolah Luar Biasa</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
                     </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/hotels.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700 text-sm">Gedung Asrama Putra</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/mosque.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Masjid</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/government.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Aula</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/musical-note (1).png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Ruang Musik</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/fork.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Ruang Makan</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/computer.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700 text-xs">Laboratorium Komputer Braille</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/dumbbell.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Ruang Fitness</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/open-book.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Perpustakaan</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/clinic.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Klinik Kesehatan</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                        <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
+                            <img src="{{ asset('icon/car.png') }}" alt="" class="h-20 w-auto">
+                        </div>
+                        <h3 class="text-gray-700">Mobil Operasional</h3>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                            Lihat 360°
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:flex md:flex">
+                    </div>
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
                             <img src="{{ asset('icon/building.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Gedung Diklat</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
                             Lihat 360°
                         </div>
                     </div>
-                    
-                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+
+                    <div
+                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
                             <img src="{{ asset('icon/stay-house.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Guest House</h3>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-lg">
                             Lihat 360°
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- Detail Section -->
                 {{-- <div class="col-span-1 p-4 bg-white rounded-lg shadow">
@@ -779,11 +888,221 @@
     </div>
     {{-- news end --}}
 
-    @include('components.review')
+    {{-- review  start --}}
+
+    <style>
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            width: 16px !important;
+            height: 4px !important;
+            border-radius: 5px !important;
+            margin: 0 6px !important;
+        }
+
+        .swiper-pagination {
+            bottom: 2px !important;
+        }
+
+        .swiper-wrapper {
+            height: max-content !important;
+            width: max-content !important;
+            padding-bottom: 64px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #4F46E5 !important;
+        }
+
+        .swiper-slide.swiper-slide-active>.slide_active\:border-indigo-600 {
+            --tw-border-opacity: 1;
+            border-color: rgb(79 70 229 / var(--tw-border-opacity));
+        }
+
+        .swiper-slide.swiper-slide-active>.group .slide_active\:text-gray-800 {
+            ---tw-text-opacity: 1;
+            color: rgb(31 41 55 / var(--tw-text-opacity));
+        }
+    </style>
+
+    <section class="py-12 ">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 ">
+                <h2 class="text-4xl text-center font-bold text-gray-900 "> Apa yang dikatakan oleh <span
+                        class="text-orange-500">Client kami?</span></h2>
+            </div>
+            <!--Slider wrapper-->
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper w-max">
+                    <div class="swiper-slide">
+                        <div
+                            class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto hover:border-indigo-600 hover:shadow-sm slide_active:border-indigo-600">
+                            <div class="">
+                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
+                                </div>
+                                <p
+                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                    Pagedone has made it possible for me to stay on top of my portfolio and make
+                                    informed
+                                    decisions
+                                    quickly and easily.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                                <img class="rounded-full h-10 w-10 object-cover"
+                                    src="https://pagedone.io/asset/uploads/1696229969.png" alt="avatar" />
+                                <div class="block">
+                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Jane D</h5>
+                                    <span class="text-sm leading-4 text-gray-500">CEO </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500  w-full mx-auto hover:border-indigo-600 slide_active:border-indigo-600 hover:shadow-sm">
+                            <div class="">
+                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
+                                </div>
+                                <p
+                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                    Thanks to pagedone, I feel more informed and confident about my investment decisions
+                                    than
+                                    ever
+                                    before.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
+                                <img class="rounded-full h-10 w-10 object-cover"
+                                    src="https://pagedone.io/asset/uploads/1696229994.png" alt="avatar" />
+                                <div class="block">
+                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Harsh P.
+                                    </h5>
+                                    <span class="text-sm leading-4 text-gray-500">Product Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class=" flex justify-between flex-col lg:w-full group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm">
+                            <div class="">
+                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
+                                </div>
+                                <p
+                                    class="text-base text-gray-600 leading-6  transition-all duration-500  pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                    The customer service team at pagedone went above and beyond to help me resolve a
+                                    billing
+                                    issue.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                                <img class="rounded-full h-10 w-10 object-cover"
+                                    src="	https://pagedone.io/asset/uploads/1696230027.png" alt="avatar" />
+                                <div class="block">
+                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Alex K.
+                                    </h5>
+                                    <span class="text-sm leading-4 text-gray-500">Design Lead</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm">
+                            <div class="">
+                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
+                                </div>
+                                <p
+                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                    Pagedone has made it possible for me to stay on top of my portfolio and make
+                                    informed
+                                    decisions
+                                    quickly and easily.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                                <img class="rounded-full h-10 w-10 object-cover"
+                                    src="https://pagedone.io/asset/uploads/1696229969.png" alt="avatar" />
+                                <div class="block">
+                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Jane D</h5>
+                                    <span class="text-sm leading-4 text-gray-500">CEO </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm ">
+                            <div class="">
+                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
+                                </div>
+                                <p
+                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                    Thanks to pagedone, I feel more informed and confident about my investment decisions
+                                    than
+                                    ever
+                                    before.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
+                                <img class="rounded-full h-10 w-10 object-cover"
+                                    src="https://pagedone.io/asset/uploads/1696229994.png" alt="avatar" />
+                                <div class="block">
+                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Harsh P.
+                                    </h5>
+                                    <span class="text-sm leading-4 text-gray-500">Product Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    {{-- review end --}}
 
     <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-lg mx-6 lg:mx-40 mb-8" data-aos="fade">
         <div class="flex lg:w-1/2 w-full lg:h-auto lg:bm-0 rounded-lg">
-            <img src="{{ asset('icon/dd.png') }}" alt="" class="w-full h-96 object-cover rounded-l-lg">
+            <img src="{{ asset('icon/dd.png') }}" alt=""
+                class="w-full lg:h-96 h-64 object-cover rounded-l-lg">
         </div>
         <div class="lg:w-1/2 w-full text-white rounded-lg lg:px-12 p-6 lg:py-0">
             <h2 class="text-sm lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
@@ -902,25 +1221,24 @@
                     <div class="relative w-full h-48 lg:w-64 lg:h-64">
                         <iframe class="absolute top-0 left-0 w-full h-full"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1636.6910057401503!2d114.84816214009834!3d-3.4349755711262553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de68107a087de0f%3A0xc044bbadaaf31076!2sPanti%20Rehabilitasi%20Sosial%20Penyandang%20Disabilitas%20Netra%20dan%20Fisik%20(PRSPDNF)%20Fajar%20Harapan!5e0!3m2!1sid!2sid!4v1727917508162!5m2!1sid!2sid"
-                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0">
                         </iframe>
                     </div>
-                
+
                     <!-- Address and Contact Information Section -->
                     <div class="flex flex-col text-sm w-64 text-white">
                         <p class=" font-semibold">Alamat Lengkap:</p>
                         <p>Jl. A. Yani, Sungai Paring, Kec. Martapura, Kabupaten Banjar, Kalimantan Selatan 70714</p>
-                        
+
                         <p class="mt-4  font-semibold">Kontak:</p>
                         <p>Telepon: (0511) 123-4567</p>
-                
+
                         <p class="mt-4  font-semibold">Email:</p>
-                        <a href="">
-                            <p>info@prspdnf-fajarharapan.co.id</p>
-                        </a>
+                        <p>info@prspdnf-fajarharapan.co.id</p>
                     </div>
                 </div>
-                
+
 
 
                 <!-- Menus (Resources, Follow Us, Legal) -->
@@ -943,8 +1261,7 @@
                         <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Layanan</h2>
                         <ul class="text-white dark:text-white font-medium">
                             <li class="mb-4">
-                                <a href="/pelayanan-persyaratan"
-                                    class="hover:underline">Persyaratan</a>
+                                <a href="/pelayanan-persyaratan" class="hover:underline">Persyaratan</a>
                             </li>
                             <li class="mb-4">
                                 <a href="/pelayanan-alur" class="hover:underline">Alur Pelayanan</a>
@@ -968,25 +1285,31 @@
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Join us</h2>
                         <ul class="flex space-x-5">
-                            <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white">
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="currentColor" viewBox="0 0 8 19">
+                            <a href="https://www.facebook.com/prspdnffajarharapan"
+                                class="text-white hover:text-gray-900 dark:hover:text-white bg-gray-600 hover:bg-gray-300 p-1 rounded-full">
+                                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd"
-                                        d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                        d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
                                         clip-rule="evenodd" />
                                 </svg>
                                 <span class="sr-only">Facebook page</span>
                             </a>
-                            <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="currentColor" viewBox="0 0 20 17">
+
+                            <a href="https://www.youtube.com/@Fajar_harapan"
+                                class="text-white hover:text-gray-900 dark:hover:text-white ms-5 bg-gray-600 hover:bg-gray-300 p-1 rounded-full">
+                                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd"
-                                        d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                        d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
                                         clip-rule="evenodd" />
                                 </svg>
+
                                 <span class="sr-only">Twitter page</span>
                             </a>
-                            <a href="https://www.instagram.com/prspdnffajarharapan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+
+                            <a href="https://www.instagram.com/prspdnffajarharapan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                class="text-white hover:text-gray-900 dark:hover:text-white ms-5 bg-gray-600 hover:bg-gray-300 p-1 rounded-full">
                                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 24 24">
                                     <path
@@ -1019,11 +1342,42 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="../path/to/src/pagedone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <!-- Include file JS menggunakan Vite -->
+    <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 32,
+            loop: true,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 32,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 32,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                },
+            },
+        });
+    </script>
+
     @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
-
-
 </body>
 
 </html>

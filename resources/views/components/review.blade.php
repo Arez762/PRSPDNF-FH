@@ -3,7 +3,7 @@
         Apa yang dikatakan oleh <span class="text-orange-500">pelanggan kami?</span>
     </h2>
 
-    <div class="review-carousel relative flex items-center justify-center space-x-6">
+    <div class="review-carousel relative flex items-center justify-center space-x-14">
         <!-- Left arrow -->
         <button class="arrow text-4xl bg-transparent border-none cursor-pointer hover:text-orange-500" onclick="prevReview()">&#10094;</button>
 
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Right arrow -->
-        <button class="arrow text-4xl bg-transparent border-none cursor-pointer hover:text-orange-500" onclick="nextReview()">&#10095;</button>
+        <button class=" arrow text-4xl bg-transparent border-none cursor-pointer hover:text-orange-500" onclick="nextReview()">&#10095;</button>
     </div>
 </div>
 

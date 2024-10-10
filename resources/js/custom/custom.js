@@ -46,8 +46,8 @@ function initCountUpObserver(targetId) {
                 // Mulai animasi count-up
                 animateValue("count1", 0, 60, 2000);
                 animateValue("count2", 0, 60, 2000);
-                animateValue("count3", 0, 11, 2000);
-                animateValue("count4", 0, 7, 2000);
+                animateValue("count3", 0, 14, 2000);
+                animateValue("count4", 0, 18, 2000);
 
                 // Hentikan observer setelah animasi dimulai
                 observer.unobserve(entry.target);
@@ -71,3 +71,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inisialisasi observer untuk animasi count-up
     initCountUpObserver('count-section');
 });
+

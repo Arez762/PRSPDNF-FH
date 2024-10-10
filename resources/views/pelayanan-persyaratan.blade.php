@@ -17,7 +17,8 @@
 
 <body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen">
 
-<x-nav-bar></x-nav-bar>
+    <x-nav-v2></x-nav-v2>
+
 
     <section class="relative bg-cover bg-center lg:h-96 h-48 lg:pt-24 pt-2"
         style="background-image: url('{{ asset('Image/Nav-bg.jpg') }}');">
@@ -38,8 +39,9 @@
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse lg:ml-20">
                     <!-- Logo with responsive sizing -->
-                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12" alt="PRSPDNF Logo" />
-        
+                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
+                        alt="PRSPDNF Logo" />
+
                     <div>
                         <!-- Text with responsive font sizes -->
                         <span class="flex uppercase text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
@@ -71,4 +73,5 @@
     @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
 
 </body>
+
 </html>

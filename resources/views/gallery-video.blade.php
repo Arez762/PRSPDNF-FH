@@ -17,7 +17,7 @@
 
 <body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen">
 
-<x-nav-bar></x-nav-bar>
+    <x-nav-v2></x-nav-v2>
 
     <section class="relative bg-cover bg-center lg:h-96 h-48 lg:pt-24 pt-2"
         style="background-image: url('{{ asset('Image/Nav-bg.jpg') }}');">
@@ -32,14 +32,74 @@
         </div>
     </section>
 
+    <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <div class="my-4">
+            <p class="text-lg lg:text-2xl font-bold">Channel Youtube <a href="https://www.youtube.com/@Fajar_harapan" class="text-orange-500">Fajar Harapan</a></p>
+            <div class="w-16 lg:w-20 h-1 bg-orange-500"></div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 py-4">
+            <div>
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/-XBFN3d5kY0?si=6KGfXBHQRS1hIwz0" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/IGKAJo8__9s?si=vHZnx9zTciRhWvPi" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+
+
+
     <footer class="bg-[#697077] dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <!-- Logo Section -->
             <div class="mb-6 md:mb-0">
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse lg:ml-20">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <!-- Logo with responsive sizing -->
-                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12" alt="PRSPDNF Logo" />
-        
+                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
+                        alt="PRSPDNF Logo" />
+
                     <div>
                         <!-- Text with responsive font sizes -->
                         <span class="flex uppercase text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
@@ -71,4 +131,5 @@
     @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
 
 </body>
+
 </html>

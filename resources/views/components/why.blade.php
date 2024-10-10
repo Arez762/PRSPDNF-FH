@@ -66,3 +66,46 @@
         </div>
     </div>
 </section>
+
+<section class="relative bg-[#F3F4F8] dark:bg-gray-900 z-10 pt-16 lg:pt-32">
+    <!-- Circles Decoration (Left) -->
+    <div class="absolute top-50 left-0 z-0">
+        <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
+        <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
+        <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
+    </div>
+
+    <div class="absolute top-30 right-0 z-0">
+        <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
+        <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
+        <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative  z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
+        <h1
+            class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
+            Langkah Kecil Menuju Kemandirian Besar
+            <span class="block mt-4 text-orange-500">Bersama Kami di Fajar Harapan!</span>
+        </h1>
+
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Dengan kasih dan kepedulian, kami membimbing setiap individu untuk bangkit dari keterbatasan, berdaya
+            secara sosial dan ekonomi, serta menjalani hidup yang bermartabat.
+        </p>
+
+        <div class="flex flex-col lg:mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="/pelayanan-alur"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-orange-500 bg-white border border-orange-500 rounded-lg shadow-md hover:bg-orange-100 focus:ring-4 focus:ring-orange-200">
+                Lihat Layanan
+            </a>
+            {{-- <a href="#"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 focus:ring-4 focus:ring-orange-300">
+                Daftar Sekarang
+            </a> --}}
+        </div>
+    </div>
+
+    <!-- Gambar dengan margin lebih kecil di mobile -->
+    <img src="{{ asset('Image/image.png') }}" alt="Children Image" class="w-screen h-auto object-cover lg:mb-8">
+</section>
