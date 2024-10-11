@@ -23,14 +23,7 @@
         <!-- Logo -->
         <div class="text-2xl font-bold text-gray-800">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <!-- Logo with responsive sizing -->
-                <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12" alt="PRSPDNF Logo" />
-                <div class="space-y-1">
-                    <!-- Text with responsive font sizes and reduced spacing -->
-                    <span
-                        class="flex uppercase font-medium text-[#1E1E1E] text-xs md:text-sm lg:text-base">PRSPDNF</span>
-                    <span class="flex font-semibold text-[#1E1E1E] text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
-                </div>
+                <img src="{{ asset('icon/Icon (1).png') }}" class="h-10 md:h-10 lg:h-16" alt="PRSPDNF Logo" />
             </a>
         </div>
 
@@ -118,8 +111,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div class="lg:hidden hidden rounded-md bg-white inset-x-0 w-full" id="mobile-menu">
-        <nav class="md:mx-2 pt-2 pb-4 space-y-1 max-h-[70vh] overflow-y-auto border-b-2 rounded-md border-[#FC6C3F]">
+    <div class="lg:hidden hidden  bg-white inset-x-0 w-full" id="mobile-menu">
+        <nav class="md:mx-2 pt-2 pb-4 space-y-1 max-h-[70vh] overflow-y-auto border-b-2 rounded-b-md border-[#FC6C3F]">
             <a href="/" class="block text-gray-700 hover:bg-gray-100 px-4 py-2 ">Home</a>
 
             <a href="#section-berita" class="block text-gray-700 hover:bg-gray-100 px-4 py-2" id="beritaButton2">

@@ -91,37 +91,7 @@
 
 
 
-    <footer class="bg-[#697077] dark:bg-gray-900">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <!-- Logo Section -->
-            <div class="mb-6 md:mb-0">
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <!-- Logo with responsive sizing -->
-                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
-                        alt="PRSPDNF Logo" />
-
-                    <div>
-                        <!-- Text with responsive font sizes -->
-                        <span class="flex uppercase text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
-                        <span class="flex font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
-                    </div>
-                </a>
-            </div>
-
-
-
-            <!-- Footer Bottom -->
-            <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-white sm:text-center dark:text-white">© 2024 <a href="#"
-                        class="hover:underline">Magang PRSPDNF FH</a>@ All Rights Reserved.</span>
-                <div class="text-white flex mt-4 sm:justify-center sm:mt-0 space-x-4">
-                    <a href="https://github.com/themesberg/flowbite" class="hover:underline">Home</a>
-                    <a href="https://github.com/themesberg/flowbite" class="hover:underline">About us</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<x-footer></x-footer>
 
 
 

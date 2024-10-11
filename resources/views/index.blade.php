@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -14,11 +14,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
     @vite('resources/css/app.css')
     <title>PRSPDNF FH</title>
 </head>
-
-{{-- nav-start --}}
 
 <body class="bg-[#F3F4F8] font-poppins">
 
@@ -32,29 +31,30 @@
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
         </div>
 
-        <div class="absolute top-30 right-0 z-0">
-            <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
-            <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
+        <div class="absolute top-30 right-0 z-0 mt-6 md:mt-0 lg:mt-0">
+            <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-500 rounded-full ml-4 mt-4"></div>
             <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
+            <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-300 rounded-full mt-4"></div>
         </div>
 
         <!-- Main Content -->
-        <div class="relative  z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
+        <div class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
             <h1
-                class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
+                class="mb-8 pt-6 lg:pt-0 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
                 Langkah Kecil Menuju Kemandirian Besar
-                <span class="block mt-4 text-orange-500">Bersama Kami di Fajar Harapan!</span>
+                <span class="block mt-2 lg:mt-4 text-[#FC6C3F]">Bersama Kami di Fajar Harapan!</span>
             </h1>
 
-            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            <p
+                class="mb-8 text-xs font-normal text-gray-500 md:text-base lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 Dengan kasih dan kepedulian, kami membimbing setiap individu untuk bangkit dari keterbatasan, berdaya
                 secara sosial dan ekonomi, serta menjalani hidup yang bermartabat.
             </p>
 
-            <div class="flex flex-col lg:mb-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <div class="flex flex-col lg:mb-4 lg:space-y-4 sm:flex-row sm:justify-center space-y-0 sm:space-x-4">
                 <a href="/pelayanan-alur"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-orange-500 bg-white border border-orange-500 rounded-lg shadow-md hover:bg-orange-100 focus:ring-4 focus:ring-orange-200">
-                    Lihat Layanan
+                    class="inline-flex justify-center items-center py-3 px-5 text-sm md:text-sm lg:text-base font-medium text-[#FC6C3F] bg-white border border-orange-500 rounded-lg shadow-md hover:bg-gray-100 focus:ring-4 focus:ring-orange-100">
+                    Lihat alur Layanan
                 </a>
                 {{-- <a href="#"
                     class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 focus:ring-4 focus:ring-orange-300">
@@ -64,32 +64,35 @@
         </div>
 
         <!-- Gambar dengan margin lebih kecil di mobile -->
-        <img src="{{ asset('Image/image.png') }}" alt="Children Image" class="w-screen h-auto object-cover lg:mb-8">
+        <img src="{{ asset('prspdnf/header-foto.png') }}" alt="Children Image"
+            class="w-screen lg:h-auto md:h-auto h-52 object-cover  lg:mb-8">
     </section>
 
     {{-- about start --}}
-    <section class=" py-8 lg:mt-8 mt-0" data-aos="fade-up">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class=" pt-8 md:pt-10 lg:pt-12 mx-4" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
             <div class="text-center">
-                <p class=" lg:text-3xl text-xl leading-9 font-extrabold text-[#FC6C3F]">
-                    Panti Rehabilitasi Sosial Penyandang Disabilitas Netra dan Fisik Fajar Harapan
+                <p class="text-xl lg:text-3xl md:text-3xl leading-9 font-extrabold text-[#FC6C3F]">
+                    Panti Rehabilitasi Sosial Penyandang Disabilitas Netra dan Fisik <br class="hidden lg:flex"> Fajar
+                    Harapan
                 </p>
-                <p class="mt-4 lg:text-lg text-sm leading-7 text-[#21272A]">
+                <p class="mt-4 text-xs md:text-sm lg:text-lg leading-7 text-[#21272A]  lg:text-center text-justify">
                     Merupakan Unit Pelaksana Teknis Daerah Dinas Sosial Provinsi Kalimantan Selatan yang bertugas
-                    Melaksanakan kegiatan operasional Dinas Sosial di bidang pelayanan, bimbingan, dan rehabilitasi
+                    melaksanakan kegiatan operasional Dinas Sosial di bidang pelayanan, bimbingan, dan rehabilitasi
                     sosial yang bersifat kuratif, rehabilitatif, promotif dalam bentuk bimbingan pengetahuan dasar
                     pendidikan, fisik, mental, sosial, pelatihan keterampilan, resosialisasi bimbingan lanjut serta
                     pelayanan rujukan bagi para penyandang disabilitas sensorik netra dan multi layanan disabilitas
-                    Fisik agar mampu mandiri dan berperan aktif dalam kehidupan bermasyarakat.
+                    fisik agar mampu mandiri dan berperan aktif dalam kehidupan bermasyarakat.
                 </p>
             </div>
+
             <div class="container mx-auto p-6 flex flex-wrap justify-center">
                 <!-- Card 1 -->
                 <a class="block" href="/profile-visidanmisi">
                     <div
                         class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
                         <img src="{{ asset('Image/bg-visimisi.jpg') }}" alt="Visi dan Misi"
-                            class="rounded-t-lg w-full h-48 object-cover">
+                            class="rounded-t-lg w-full h-40 object-cover">
                         <div class="p-6">
                             <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
                             <h3 class="text-xl font-semibold mb-6">Visi dan Misi</h3>
@@ -101,7 +104,7 @@
                     <div
                         class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
                         <img src="{{ asset('Image/prspdnf_1.jpg') }}" alt="Sejarah"
-                            class="rounded-t-lg w-full h-48 object-cover">
+                            class="rounded-t-lg w-full h-40 object-cover">
                         <div class="p-6">
                             <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
                             <h3 class="text-xl font-semibold mb-6">Sejarah</h3>
@@ -112,8 +115,8 @@
                 <a class="block" href="/profile-tenagaahli">
                     <div
                         class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                        <img src="{{ asset('Image/organization-level-1.png') }}" alt="Tenaga Ahli"
-                            class="rounded-t-lg w-full h-48 object-cover">
+                        <img src="{{ asset('prspdnf/IMG_E3659.JPG') }}" alt="Tenaga Ahli"
+                            class="rounded-t-lg w-full h-40 object-cover">
                         <div class="p-6">
                             <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
                             <h3 class="text-xl font-semibold mb-6">Tenaga Ahli</h3>
@@ -121,38 +124,38 @@
                     </div>
                 </a>
             </div>
-
         </div>
     </section>
     {{-- about end --}}
 
     <!-- Section why Start -->
-    <section id="count-section" class="lg:py-12" data-aos="fade-up">
-        <div class="container mx-auto px-4 text-center">
-
+    <section id="count-section" class="py-8 md:py-10 lg:py-12 bg-white rounded-2xl shadow-lg mx-6 lg:mx-8"
+        data-aos="fade-up">
+        <div class="container mx-auto px-4">
             <!-- Section Title -->
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#21272A] mb-4">
+            <h2 class="text-center text-xl md:text-2xl lg:text-3xl font-bold text-[#21272A] mb-4">
                 Kenapa harus di <span class="text-[#FC6C3F]">Fajar Harapan?</span>
             </h2>
-
             <!-- Section Description -->
-            <p class="text-gray-600 max-w-2xl mx-auto mb-10 text-base sm:text-lg lg:text-xl leading-relaxed">
+            <p
+                class="text-gray-600 max-w-2xl mx-auto mb-10 text-xs md:text-base lg:text-lg md:text-center lg:text-center text-justify leading-relaxed">
                 Fajar Harapan berkomitmen membantu penyandang disabilitas mencapai kemandirian melalui layanan
                 rehabilitasi lengkap, tenaga ahli berpengalaman, dan fasilitas ramah disabilitas. Kami mendukung
                 pemulihan fisik, mental, dan sosial untuk hidup yang berdaya dan bermakna.
             </p>
 
             <!-- Cards Start -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
                 <!-- Card 1 -->
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/mood-check.png') }}" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/mood-check.png') }}" alt="Icon"
+                            class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count1">60</h3>
+                        <h3 class="lg:text-xl md:text-xl text-sm font-semibold text-gray-900" id="count1"></h3>
                         <p class="text-gray-600">client </p>
                     </div>
                 </div>
@@ -161,10 +164,11 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/users-group.png') }}" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/users-group.png') }}" alt="Icon"
+                            class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count2">60</h3>
+                        <h3 class="lg:text-xl md:text-xl text-sm font-semibold text-gray-900" id="count2"></h3>
                         <p class="text-gray-600">Tenaga ahli</p>
                     </div>
                 </div>
@@ -173,10 +177,11 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/Vector_House.png') }}" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/Vector_House.png') }}" alt="Icon"
+                            class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count3">14</h3>
+                        <h3 class="lg:text-xl md:text-xl text-sm font-semibold text-gray-900" id="count3"></h3>
                         <p class="text-gray-600">Fasilitas Rumah Disabilitas</p>
                     </div>
                 </div>
@@ -185,10 +190,11 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/list-check.png') }}" alt="Icon" class="w-8 h-8">
+                        <img src="{{ asset('icon/list-check.png') }}" alt="Icon"
+                            class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
-                        <h3 class="text-xl font-semibold text-gray-900" id="count4">18</h3>
+                        <h3 class="lg:text-xl md:text-xl text-sm font-semibold text-gray-900" id="count4"></h3>
                         <p class="text-gray-600">Program Pemberdayaan</p>
                     </div>
                 </div>
@@ -198,9 +204,9 @@
     {{-- end why --}}
 
     {{-- service start --}}
-    <section class="relative z-40">
+    <section class="relative z-40 pt-4 md:py-6 lg:py-8">
         <div class="container mx-auto py-8 px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <!-- Left Image Section -->
                 <div class="flex items-center justify-center rounded-xl" data-aos="fade-down">
@@ -213,7 +219,8 @@
 
                 <!-- Right Content Section -->
                 <div class="bg-white p-6 shadow-lg rounded-lg text-center relative z-50" data-aos="fade-up">
-                    <h2 class="text-2xl font-bold mb-4">Program rehabilitasi yang ada di Fajar Harapan?</h2>
+                    <h2 class="lg:text-2xl md:text-2xl text-xl font-bold mb-4">Program rehabilitasi yang ada di <span
+                            class="text-[#FC6C3F]">Fajar Harapan?</span></h2>
                     <p class="text-gray-600 mb-6">
                         Fajar harapan menyediakan beberapa program yang dapat membantu penyandang disabilitas seperti:
                     </p>
@@ -436,7 +443,6 @@
                                             materi pelajaran dengan metode khusus agar peserta didik dapat mengembangkan
                                             pengetahuan dan keterampilan dasar.</p>
                                     </li>
-
                                     <li>
                                         <p class="block px-4 py-1 underline">SMALB (Sekolah Menengah Atas Luar Biasa)
                                         </p>
@@ -447,25 +453,22 @@
                                 </ul>
                             </div>
                         </div>
-
-
-
                         <!-- Repeat buttons for other dropdowns (Button 2, Button 3, etc.) as necessary -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     {{-- service end     --}}
 
     {{-- fasilitas start --}}
-    <section class="lg:pt-8 z-10" data-aos="fade">
+    <section class="z-10 " data-aos="fade">
         <div class="container mx-auto p-4">
             <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-[#FC6C3F] py-8">Fasilitas yang disediakan <span
-                        class="text-black">di Fajar Harapan</span></h2>
-                <p class="text-gray-700">Fajar Harapan menyediakan beberapa layanan yang dapat membantu penyandang
+                <h2 class="lg:text-3xl md:text-2xl text-xl font-bold text-[#FC6C3F] py-4">Fasilitas yang disediakan
+                    di<span class="text-black"> Fajar Harapan</span></h2>
+                <p class="text-gray-700 text-xs md:text-base lg:text-lg">Fajar Harapan menyediakan beberapa layanan
+                    yang dapat membantu penyandang
                     disabilitas seperti:</p>
             </div>
             <!-- Section Layout -->
@@ -647,128 +650,122 @@
                 </div>
                 <!-- Detail Section -->
                 {{-- <div class="col-span-1 p-4 bg-white rounded-lg shadow">
-                    <div class="w-full h-80 bg-gray-300 rounded mb-4"></div>
-                    <h3 class="text-xl font-semibold mb-2">Fasilitas 1</h3>
-                    <p class="text-gray-600 mb-4">
-                        Lorem ipsum dolor sit amet consectetur. Nunc mattis vitae ridiculus at lorem tortor
-                        vestibulum. Nam elit tincidunt urna non vulputate accumsan.
-                    </p>
-                    <a href="#" class="text-indigo-600 font-semibold">Lihat dalam 360° &rarr;</a>
-                </div> --}}
+                        <div class="w-full h-80 bg-gray-300 rounded mb-4"></div>
+                        <h3 class="text-xl font-semibold mb-2">Fasilitas 1</h3>
+                        <p class="text-gray-600 mb-4">
+                            Lorem ipsum dolor sit amet consectetur. Nunc mattis vitae ridiculus at lorem tortor
+                            vestibulum. Nam elit tincidunt urna non vulputate accumsan.
+                        </p>
+                        <a href="#" class="text-indigo-600 font-semibold">Lihat dalam 360° &rarr;</a>
+                    </div> --}}
             </div>
 
             <!-- Load More Button -->
             {{-- <div class="flex justify-center mt-6">
-                <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-                    Lihat Lebih Banyak
-                </button>
-            </div> --}}
+                    <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+                        Lihat Lebih Banyak
+                    </button>
+                </div> --}}
         </div>
     </section>
     {{-- fasilitas end --}}
 
     {{-- gallery start --}}
     <div data-aos="fade">
-        <div class="container mx-auto px-4 py-8 text-center justify-center lg:p-28">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-12">
+        <div class="container mx-auto px-4 lg:py-16 py-8 text-center justify-center lg:px-40">
+            <h2 class="lg:text-3xl md:text-2xl text-xl font-extrabold text-gray-900 mb-8">
                 Jelajahi momen-momen inspiratif di <span class="text-orange-500">Fajar Harapan!</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <!-- Large item -->
                 <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxuYXR1cmV8ZW58MHwwfHx8MTcyMTA0MjYwMXww&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Nature" class="w-full h-full object-cover">
+                    <img src="{{ asset('prspdnf/DSC06290.JPG') }}" alt="Nature"
+                        class="w-full h-full object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h3 class="text-2xl font-bold text-white">Explore Nature</h3>
-                            <p class="text-white">Discover the beauty of the natural world</p>
+                            <h3 class="lg:text-2xl md:text-2xl text-xl font-bold text-white">Lihat Lebih Banyak</h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- Two small items -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Food" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC04537.JPG') }}" alt="Food" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Culinary Delights</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHx0ZWNobm9sb2d5fGVufDB8MHx8fDE3MjEwNDI2Mjh8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Technology" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC04598.JPG') }}" alt="Technology"
+                        class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Tech Innovations</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- Three medium items -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHx0cmF2ZWx8ZW58MHwwfHx8MTcyMTA0MjY0MXww&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Travel" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC06807.JPG') }}" alt="Travel" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Travel Adventures</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxhcnR8ZW58MHwwfHx8MTcyMTA0MjY5Nnww&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Art" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC06808.JPG') }}" alt="Art" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Artistic Expressions</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- bottom cards -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxzd2ltbWluZ3xlbnwwfDB8fHwxNzIxMDQzMjkxfDA&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC07366.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Swimming</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8Y2hlc3N8ZW58MHwwfHx8MTcyMTA0MzI0Nnww&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC07358.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Chess</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxmb290YmFsbHxlbnwwfDB8fHwxNzIxMDQzMjExfDA&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC06901.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Football</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
+
                         </div>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw3fHxjcmlja2V0fGVufDB8MHx8fDE3MjEwNDMxNTh8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                        alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('prspdnf/DSC07029.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Cricket</h4>
+                            <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
+
                         </div>
                     </div>
                 </div>
@@ -780,7 +777,7 @@
     {{-- news start --}}
     <div id="section-berita" class="container mx-auto py-8 px-4" data-aos="fade-up">
         <!-- Title -->
-        <h1 class="text-3xl font-bold text-center w-full mb-8 lg:mb-16">
+        <h1 class="lg:text-3xl md:text-2xl text-xl font-bold text-center w-full mb-8 lg:mb-16">
             Ketahui kegiatan-kegiatan apa saja yang sedang berlangsung di Fajar Harapan
         </h1>
 
@@ -880,16 +877,15 @@
         </div>
 
         <!-- "Berita Lainnya" Button -->
-        <div class="text-right mt-8">
+        {{-- <div class="text-right mt-8">
             <button class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition">
                 Berita Lainnya
             </button>
-        </div>
+        </div> --}}
     </div>
     {{-- news end --}}
 
     {{-- review  start --}}
-
     <style>
         .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
         .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -923,16 +919,14 @@
             color: rgb(31 41 55 / var(--tw-text-opacity));
         }
     </style>
-
-    <section class="py-12 ">
+    <section class=" bg-white lg:mt-4 mx-4 lg:mx-12 rounded-xl shadow-xl md:mx-8">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 ">
-                <h2 class="text-4xl text-center font-bold text-gray-900 "> Apa yang dikatakan oleh <span
-                        class="text-orange-500">Client kami?</span></h2>
+            <div class="py-8 lg:py-12 ">
+                <h2 class="text-xl lg:text-3xl md:text-2xl text-center font-bold text-gray-900 "> Apa yang dikatakan
+                    oleh <span class="text-orange-500">Client kami?</span></h2>
             </div>
             <!--Slider wrapper-->
-
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper lg:pb-8 pb-2">
                 <div class="swiper-wrapper w-max">
                     <div class="swiper-slide">
                         <div
@@ -1092,27 +1086,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination py-8"></div>
             </div>
         </div>
     </section>
-
     {{-- review end --}}
 
-    <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-lg mx-6 lg:mx-40 mb-8" data-aos="fade">
-        <div class="flex lg:w-1/2 w-full lg:h-auto lg:bm-0 rounded-lg">
+    <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-xl shadow-xl md:mx-8 mx-4 lg:mx-40 my-12">
+        <div class="flex lg:w-1/2 w-full lg:h-auto lg:mb-0 rounded-xl">
             <img src="{{ asset('icon/dd.png') }}" alt=""
-                class="w-full lg:h-96 h-64 object-cover rounded-l-lg">
+                class="w-full h-auto lg:h-96 md:h-72 object-cover rounded-t-xl lg:rounded-xl">
         </div>
         <div class="lg:w-1/2 w-full text-white rounded-lg lg:px-12 p-6 lg:py-0">
-            <h2 class="text-sm lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
+            <h2 class="text- lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
                 Kami adalah jawaban terbaik yang pernah Anda temukan
             </h2>
-            <h1 class="text-lg lg:text-3xl font-bold text-center lg:text-left my-6">
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left my-6">
                 Tunggu apalagi? <br> <span class="text-orange-400">Segera bergabung</span> bersama keluarga besar kami
                 sekarang dan rasakan perubahan yang terjadi di hidup Anda!
             </h1>
-            <div class="flex justify-center lg:justify-start mt-8">
+            <div class="flex text-sm lg:text-base justify-center lg:justify-start mt-8">
                 <button class="bg-orange-400 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-orange-500">
                     Daftar Sekarang
                 </button>
@@ -1121,12 +1114,13 @@
     </div>
 
     {{-- kerjasama --}}
-    <section class="pt-2" data-aos="fade-up">
-        <div class="w-full text-center text-xl md:text-4xl font-semibold mt-3 md:mt-12">Kerjasama</div>
-        <div class="relative flex overflow-hidden space-x-8 md:space-x-16 group my-8 md:my-12">
+    <section class="py-6 rounded-xl mx-4 md:mx-8 lg:mx-12 my-8 bg-white shadow-xl" data-aos="fade-up">
+        <div class="w-full text-center text-xl md:text-2xl lg:text-3xl font-semibold lg:pb-8 md:pb-4 pb-4">Kerjasama
+        </div>
+        <div class="relative flex overflow-hidden space-x-8 md:space-x-16 group md:pb-4 pb-2">
             <!-- Left Blur -->
             <div
-                class="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent pointer-events-none blur-[1px] z-10">
+                class=" absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent pointer-events-none blur-[3px] z-10">
             </div>
 
             <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused">
@@ -1188,7 +1182,7 @@
 
 
             <div
-                class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent pointer-events-none blur-[1px] z-10">
+                class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent pointer-events-none blur-[3px] z-10">
             </div>
         </div>
     </section>
@@ -1204,11 +1198,12 @@
                     <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
                         alt="PRSPDNF Logo" />
 
-                    <div>
-                        <!-- Text with responsive font sizes -->
-                        <span class="flex uppercase text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
-                        <span class="flex font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
-                    </div>
+                        <div class="flex flex-col items-center">
+                            <!-- Text with responsive font sizes -->
+                            <span class="uppercase text-center text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
+                            <span class="font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
+                        </div>
+                        
                 </a>
                 <!-- Extended Horizontal Line -->
                 <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8 w-full" />
@@ -1227,7 +1222,7 @@
                     </div>
 
                     <!-- Address and Contact Information Section -->
-                    <div class="flex flex-col text-sm w-64 text-white">
+                    <div class="flex flex-col lg:text-sm md:text-sm text-xs w-64 text-white">
                         <p class=" font-semibold">Alamat Lengkap:</p>
                         <p>Jl. A. Yani, Sungai Paring, Kec. Martapura, Kabupaten Banjar, Kalimantan Selatan 70714</p>
 
@@ -1239,43 +1234,47 @@
                     </div>
                 </div>
 
-
-
                 <!-- Menus (Resources, Follow Us, Legal) -->
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4 mt-4 md:mt-0 md:ml-8 text-left pt-3">
+                <div class="grid grid-cols-2 gap-6 lg:grid-cols-4 md:grid-cols-3 mt-4 md:mt-0 md:ml-8 text-left pt-3">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Profile</h2>
+                        <h2
+                            class="mb-6 text-sm lg:text-base md:text-base font-semibold text-white uppercase dark:text-white">
+                            Profile</h2>
                         <ul class="text-white dark:text-white font-medium">
-                            <li class="mb-4">
+                            <li class="mb-4 text-xs lg:text-base md:text-base ">
                                 <a href="/profile-visidanmisi" class="hover:underline">Visi & Misi</a>
                             </li>
-                            <li class="mb-4">
+                            <li class="mb-4 text-xs lg:text-base md:text-base">
                                 <a href="/profile-sejarah" class="hover:underline">Sejarah</a>
                             </li>
-                            <li>
+                            <li class="text-xs lg:text-base md:text-base">
                                 <a href="/profile-tenagaahli" class="hover:underline">Tenaga Ahli</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Layanan</h2>
+                        <h2
+                            class="mb-6 text-sm lg:text-base md:text-base font-semibold text-white uppercase dark:text-white">
+                            Layanan</h2>
                         <ul class="text-white dark:text-white font-medium">
-                            <li class="mb-4">
+                            <li class="mb-4 text-xs lg:text-base md:text-base">
                                 <a href="/pelayanan-persyaratan" class="hover:underline">Persyaratan</a>
                             </li>
-                            <li class="mb-4">
+                            <li class="text-xs lg:text-base md:text-base">
                                 <a href="/pelayanan-alur" class="hover:underline">Alur Pelayanan</a>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Gallery</h2>
+                        <h2
+                            class="mb-6 text-sm lg:text-base md:text-base font-semibold text-white uppercase dark:text-white">
+                            Gallery</h2>
                         <ul class="text-white dark:text-white font-medium">
-                            <li class="mb-4">
+                            <li class="mb-4 text-xs lg:text-base md:text-base">
                                 <a href="/gallery-foto" class="hover:underline">Foto</a>
                             </li>
-                            <li>
+                            <li class="text-xs lg:text-base md:text-base">
                                 <a href="/gallery-video" class="hover:underline">Video</a>
                             </li>
                         </ul>
@@ -1325,18 +1324,21 @@
 
             <!-- Footer Bottom -->
             <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-white sm:text-center dark:text-white">© 2024 <a href="#"
-                        class="hover:underline">Magang PRSPDNF FH</a>@ All Rights Reserved.</span>
-                <div class="text-white flex mt-4 sm:justify-center sm:mt-0 space-x-4">
+            <div class="sm:flex sm:items-center sm:justify-between flex flex-col-reverse sm:flex-row">
+                <span class="lg:text-sm md-text-sm text-xs text-white sm:text-center dark:text-white">
+                    © 2024 <a href="#" class="hover:underline">Magang PRSPDNF FH</a> @ All Rights Reserved.
+                </span>
+                <div class="text-white flex mb-4 sm:justify-center sm:mb-0 space-x-4">
                     <a href="/" class="hover:underline">Home</a>
                     <a href="aboutus" class="hover:underline">About us</a>
                 </div>
             </div>
         </div>
     </footer>
-
     {{-- footer end --}}
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
@@ -1374,8 +1376,6 @@
             },
         });
     </script>
-
-    @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
 </body>
 
 </html>
