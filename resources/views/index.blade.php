@@ -14,8 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
     @vite('resources/css/app.css')
+
     <title>PRSPDNF FH</title>
 </head>
 
@@ -1198,12 +1198,12 @@
                     <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
                         alt="PRSPDNF Logo" />
 
-                        <div class="flex flex-col items-center">
-                            <!-- Text with responsive font sizes -->
-                            <span class="uppercase text-center text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
-                            <span class="font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
-                        </div>
-                        
+                    <div class="flex flex-col items-center">
+                        <!-- Text with responsive font sizes -->
+                        <span class="uppercase text-center text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
+                        <span class="font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
+                    </div>
+
                 </a>
                 <!-- Extended Horizontal Line -->
                 <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8 w-full" />
@@ -1376,6 +1376,6 @@
             },
         });
     </script>
+    @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
 </body>
-
 </html>

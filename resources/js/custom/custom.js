@@ -7,9 +7,9 @@ function initAOS() {
         useClassNames: true, // Aktifkan penggunaan class
         initClassName: false, // Nonaktifkan kelas awal
         animatedClassName: 'aos-animate', // Kelas yang ditambahkan saat animasi
-        onComplete: function () {
+        onComplete: function() {
             // Reset transform setelah animasi AOS selesai
-            setTimeout(function () {
+            setTimeout(function() {
                 document.querySelectorAll('[data-aos]').forEach(el => {
                     el.style.transform = 'none';
                 });
@@ -26,7 +26,7 @@ function animateValue(id, start, end, duration) {
     let increment = end > start ? 1 : -1;
     let stepTime = Math.abs(Math.floor(duration / range));
 
-    let timer = setInterval(function () {
+    let timer = setInterval(function() {
         current += increment;
         obj.textContent = current;
         if (current == end) {
@@ -64,11 +64,10 @@ function initCountUpObserver(targetId) {
 }
 
 // Memanggil kedua fungsi ketika DOM selesai dimuat
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Inisialisasi AOS
     initAOS();
 
     // Inisialisasi observer untuk animasi count-up
     initCountUpObserver('count-section');
 });
-
