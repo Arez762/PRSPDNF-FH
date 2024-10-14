@@ -919,6 +919,7 @@
             color: rgb(31 41 55 / var(--tw-text-opacity));
         }
     </style>
+    
     <section class=" bg-white lg:mt-4 mx-4 lg:mx-12 rounded-xl shadow-xl md:mx-8">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="py-8 lg:py-12 ">
