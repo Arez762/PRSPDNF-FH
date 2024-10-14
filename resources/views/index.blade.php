@@ -1196,7 +1196,7 @@
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <!-- Logo with responsive sizing -->
-                    <img src="{{ asset('icon/Logo PRSPDNF FH.png') }}" class="h-8 md:h-10 lg:h-12"
+                    <img src="{{ asset('icon/Logo PRSPDNF FH.ico')}}" class="h-8 md:h-10 lg:h-12"
                         alt="PRSPDNF Logo" />
 
                     <div class="flex flex-col items-center">
