@@ -1,6 +1,6 @@
 <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-xl shadow-xl md:mx-8 mx-4 lg:mx-40 my-12">
-    <div class="flex lg:w-1/2 w-full lg:h-auto lg:mb-0 rounded-xl">
-        <img src="{{ asset('icon/dd.png') }}" alt=""
+    <div class="flex lg:w-1/2 w-full lg:h-auto md:h-auto lg:mb-0 rounded-xl">
+        <img src="{{ asset('Image/icon/dd.png') }}" alt=""
             class="w-full h-auto lg:h-96 md:h-72 object-cover rounded-t-xl lg:rounded-xl">
     </div>
     <div class="lg:w-1/2 w-full text-white rounded-lg lg:px-12 p-6 lg:py-0">

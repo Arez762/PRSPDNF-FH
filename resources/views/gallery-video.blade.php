@@ -17,10 +17,10 @@
 
 <body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen">
 
-    <x-nav-v2></x-nav-v2>
+    <x-navbar></x-navbar>
 
     <section class="relative bg-cover bg-center lg:h-96 h-48 lg:pt-24 pt-2"
-        style="background-image: url('{{ asset('Image/Nav-bg.jpg') }}');">
+        style="background-image: url('{{ asset('Image/Background/Nav-bg.jpg') }}');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="container mx-auto relative z-10 text-center justify-center text-white py-20">
             <!-- Top Small Title -->
@@ -34,12 +34,13 @@
 
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <div class="my-4">
-            <p class="text-lg lg:text-2xl font-bold">Channel Youtube <a href="https://www.youtube.com/@Fajar_harapan" class="text-orange-500">Fajar Harapan</a></p>
+            <p class="text-lg lg:text-2xl font-bold">Channel Youtube <a href="https://www.youtube.com/@Fajar_harapan"
+                    class="text-orange-500">Fajar Harapan</a></p>
             <div class="w-16 lg:w-20 h-1 bg-orange-500"></div>
         </div>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 py-4">
             <div>
-                <iframe class="w-full h-64 rounded-lg"
+                <iframe class="w-full h-64 rounded-lg" loading="lazy"
                     src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -47,23 +48,7 @@
             </div>
 
             <div>
-                <iframe class="w-full h-64 rounded-lg"
-                    src="https://www.youtube.com/embed/-XBFN3d5kY0?si=6KGfXBHQRS1hIwz0" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-lg"
-                    src="https://www.youtube.com/embed/IGKAJo8__9s?si=vHZnx9zTciRhWvPi" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-lg"
+                <iframe class="w-full h-64 rounded-lg" loading="lazy"
                     src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -71,7 +56,7 @@
             </div>
 
             <div>
-                <iframe class="w-full h-64 rounded-lg"
+                <iframe class="w-full h-64 rounded-lg" loading="lazy"
                     src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -79,19 +64,37 @@
             </div>
 
             <div>
-                <iframe class="w-full h-64 rounded-lg"
+                <iframe class="w-full h-64 rounded-lg" loading="lazy"
                     src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
+            <div>
+                <iframe class="w-full h-64 rounded-lg" loading="lazy"
+                    src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-lg" loading="lazy"
+                    src="https://www.youtube.com/embed/Sy3Ufoh0Cfg?si=GfF8OSvUWpPvDj7Y" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- Ulangi struktur di atas untuk video lainnya dengan `loading="lazy"` -->
         </div>
     </div>
 
 
 
-<x-footer></x-footer>
+    <x-card-all></x-card-all>
+
+    <x-footer></x-footer>
 
 
 

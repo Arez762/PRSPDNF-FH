@@ -1,39 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GalleryController;
 
-Route::get('/', function () {
-    return view('index');
-});
+// Rute untuk halaman utama yang menampilkan semua berita
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/news/category/{slug}', [NewsController::class, 'category'])->name('news.category');
+Route::get('/search', [NewsController::class, 'search'])->name('news.search');
 
-Route::get('profile-sejarah', function () {
-    return view('profile-sejarah');
-});
 
-Route::get('profile-visidanmisi', function () {
-    return view('profile-visidanmisi');
-});
+Route::get('/', [ProfileController::class, 'index']);
+Route::get('profile-sejarah', [ProfileController::class, 'sejarah']);
+Route::get('profile-visidanmisi', [ProfileController::class, 'visidanmisi']);
+Route::get('profile-tenagaahli', [ProfileController::class, 'tenagaAhli']);
+Route::get('gallery-foto', [ProfileController::class, 'galleryFoto']);
+Route::get('gallery-video', [ProfileController::class, 'galleryVideo']);
+Route::get('pelayanan-persyaratan', [ProfileController::class, 'pelayananPersyaratan']);
+Route::get('pelayanan-alur', [ProfileController::class, 'pelayananAlur']);
+Route::get('aboutus', [ProfileController::class, 'aboutUs']);
 
-Route::get('profile-tenagaahli', function () {
-    return view('profile-tenagaahli');
-});
 
-Route::get('gallery-foto', function () {
-    return view('gallery-foto');
-});
 
-Route::get('gallery-video', function () {
-    return view('gallery-video');
-});
-
-Route::get('pelayanan-persyaratan', function () {
-    return view('pelayanan-persyaratan');
-});
-
-Route::get('pelayanan-alur', function () {
-    return view('pelayanan-alur');
-});
-
-Route::get('aboutus', function () {
-    return view('aboutus');
-});
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');

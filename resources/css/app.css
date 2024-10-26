@@ -1,13 +1,3 @@
-/* Move the @import to the top of your main CSS file */
-/* Tailwind CSS */
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
-@layer utilities{
-    .paused {
-        animation-play-state: paused;
-    }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

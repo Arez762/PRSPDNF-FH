@@ -17,11 +17,11 @@
 
 <body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen">
 
-    <x-nav-v2></x-nav-v2>
+    <x-navbar></x-navbar>
 
 
     <section class="relative bg-cover bg-center lg:h-96 h-48 lg:pt-24 pt-2"
-        style="background-image: url('{{ asset('Image/Nav-bg.jpg') }}');">
+        style="background-image: url('{{ asset('Image/Background/Nav-bg.jpg') }}');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="container mx-auto relative z-10 text-center justify-center text-white py-20">
             <!-- Top Small Title -->

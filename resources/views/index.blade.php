@@ -8,39 +8,38 @@
     <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet" />
     <link href="../path/to/src/pagedone.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     @vite('resources/css/app.css')
-
     <title>PRSPDNF FH</title>
 </head>
 
 <body class="bg-[#F3F4F8] font-poppins">
 
-    <x-nav-v2></x-nav-v2>
+    <x-navbar></x-navbar>
 
-    <section class="relative bg-[#F3F4F8] dark:bg-gray-900 z-10 pt-16 lg:pt-32">
+    <section class="relative z-10 pt-16 lg:pt-32">
         <!-- Circles Decoration (Left) -->
         <div class="absolute top-50 left-0 z-0">
             <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-500 rounded-full"></div>
             <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-300 rounded-full mt-2 ml-16"></div>
         </div>
-
         <div class="absolute top-30 right-0 z-0 mt-6 md:mt-0 lg:mt-0">
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-500 rounded-full ml-4 mt-4"></div>
             <div class="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-orange-400 rounded-full mt-4 ml-8"></div>
             <div class="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-orange-300 rounded-full mt-4"></div>
         </div>
-
         <!-- Main Content -->
         <div class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 lg:px-12">
             <h1
-                class="mb-8 pt-6 lg:pt-0 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
+                class="mb-8 pt-6 lg:pt-0 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl">
                 Langkah Kecil Menuju Kemandirian Besar
                 <span class="block mt-2 lg:mt-4 text-[#FC6C3F]">Bersama Kami di Fajar Harapan!</span>
             </h1>
@@ -62,21 +61,21 @@
                 </a> --}}
             </div>
         </div>
-
         <!-- Gambar dengan margin lebih kecil di mobile -->
-        <img src="{{ asset('prspdnf/header-foto.png') }}" alt="Children Image"
-            class="w-screen lg:h-auto md:h-auto h-52 object-cover  lg:mb-8">
+        <img src="{{ asset('Image/Background/header-foto.png') }}" alt="Children Image"
+            class="w-screen lg:h-auto md:h-auto h-52 object-cover lg:mb-8" loading="lazy">
+
     </section>
 
     {{-- about start --}}
-    <section class=" pt-8 md:pt-10 lg:pt-12 mx-4" data-aos="fade-up">
+    <section class="pt-8 md:pt-10 lg:pt-12 mx-4" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
             <div class="text-center">
                 <p class="text-xl lg:text-3xl md:text-3xl leading-9 font-extrabold text-[#FC6C3F]">
                     Panti Rehabilitasi Sosial Penyandang Disabilitas Netra dan Fisik <br class="hidden lg:flex"> Fajar
                     Harapan
                 </p>
-                <p class="mt-4 text-xs md:text-sm lg:text-lg leading-7 text-[#21272A]  lg:text-center text-justify">
+                <p class="mt-4 text-xs md:text-sm lg:text-lg leading-7 text-[#21272A] lg:text-center text-justify">
                     Merupakan Unit Pelaksana Teknis Daerah Dinas Sosial Provinsi Kalimantan Selatan yang bertugas
                     melaksanakan kegiatan operasional Dinas Sosial di bidang pelayanan, bimbingan, dan rehabilitasi
                     sosial yang bersifat kuratif, rehabilitatif, promotif dalam bentuk bimbingan pengetahuan dasar
@@ -91,8 +90,9 @@
                 <a class="block" href="/profile-visidanmisi">
                     <div
                         class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                        <img src="{{ asset('Image/bg-visimisi.jpg') }}" alt="Visi dan Misi"
-                            class="rounded-t-lg w-full h-40 object-cover">
+                        <img src="{{ asset('Image/Background/bg-visimisi.jpg') }}" alt="Visi dan Misi"
+                            class="rounded-t-lg w-full h-40 object-cover lazyload transition-opacity duration-500 opacity-0"
+                            loading="lazy" onload="this.style.opacity=1">
                         <div class="p-6">
                             <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
                             <h3 class="text-xl font-semibold mb-6">Visi dan Misi</h3>
@@ -103,8 +103,9 @@
                 <a class="block" href="/profile-sejarah">
                     <div
                         class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                        <img src="{{ asset('Image/prspdnf_1.jpg') }}" alt="Sejarah"
-                            class="rounded-t-lg w-full h-40 object-cover">
+                        <img src="{{ asset('Image/Background/bg-sejarah.jpg') }}" alt="Sejarah"
+                            class="rounded-t-lg w-full h-40 object-cover lazyload transition-opacity duration-500 opacity-0"
+                            loading="lazy" onload="this.style.opacity=1">
                         <div class="p-6">
                             <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
                             <h3 class="text-xl font-semibold mb-6">Sejarah</h3>
@@ -115,17 +116,19 @@
                 <a class="block" href="/profile-tenagaahli">
                     <div
                         class="bg-white rounded-lg shadow-lg m-4 w-80 transform transition duration-300 hover:scale-105">
-                        <img src="{{ asset('prspdnf/IMG_E3659.JPG') }}" alt="Tenaga Ahli"
-                            class="rounded-t-lg w-full h-40 object-cover">
+                        <img src="{{ asset('Image/Background/bg-tenagaahli.JPG') }}" alt="Tenaga Ahli"
+                            class="rounded-t-lg w-full h-40 object-cover lazyload transition-opacity duration-500 opacity-0"
+                            loading="lazy" onload="this.style.opacity=1">
                         <div class="p-6">
                             <h4 class="text-lg text-[#FC6C3F] font-semibold mb-2">Profile</h4>
-                            <h3 class="text-xl font-semibold mb-6">Tenaga Ahli</h3>
+                            <h3 class="text-xl font-semibold mb-6">Tenaga Struktural</h3>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
     </section>
+
     {{-- about end --}}
 
     <!-- Section why Start -->
@@ -151,7 +154,7 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/mood-check.png') }}" alt="Icon"
+                        <img src="{{ asset('Image/icon/mood-check.png') }}" alt="Icon"
                             class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
@@ -164,12 +167,12 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/users-group.png') }}" alt="Icon"
+                        <img src="{{ asset('Image/icon/users-group.png') }}" alt="Icon"
                             class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
                         <h3 class="lg:text-xl md:text-xl text-sm font-semibold text-gray-900" id="count2"></h3>
-                        <p class="text-gray-600">Tenaga ahli</p>
+                        <p class="text-gray-600">Tenaga Struktural</p>
                     </div>
                 </div>
 
@@ -177,12 +180,12 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/Vector_House.png') }}" alt="Icon"
+                        <img src="{{ asset('Image/icon/Vector_House.png') }}" alt="Icon"
                             class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
                         <h3 class="lg:text-xl md:text-xl text-sm font-semibold text-gray-900" id="count3"></h3>
-                        <p class="text-gray-600">Fasilitas Rumah Disabilitas</p>
+                        <p class="text-gray-600">Fasilitas</p>
                     </div>
                 </div>
 
@@ -190,7 +193,7 @@
                 <div class="flex items-start border rounded-lg p-6 shadow-md bg-white">
                     <!-- Icon -->
                     <div class="bg-gray-200 p-3 rounded-md mr-4">
-                        <img src="{{ asset('icon/list-check.png') }}" alt="Icon"
+                        <img src="{{ asset('Image/icon/list-check.png') }}" alt="Icon"
                             class="lg:w-8 lg:h-8 md:w-8 md:h-8 w-5 h-5">
                     </div>
                     <div class="text-left">
@@ -212,8 +215,10 @@
                 <div class="flex items-center justify-center rounded-xl" data-aos="fade-down">
                     <div class="w-full h-full flex items-center justify-center">
                         <!-- Placeholder for Image -->
-                        <img src="{{ asset('Image/DSC06900.JPG') }}" alt=""
-                            class="w-full h-full rounded-tl-[80px] rounded-br-[80px] shadow-md">
+                        <img src="{{ asset('Image/Background/bg-program-min.JPG') }}" alt=""
+                            class="w-full h-full rounded-tl-[80px] rounded-br-[80px] shadow-md transition-opacity duration-500 opacity-0 lazyload"
+                            loading="lazy" onload="this.style.opacity=1">
+
                     </div>
                 </div>
 
@@ -476,10 +481,12 @@
                 <!-- Grid of Facility Items -->
                 <div class="col-span-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
                     <!-- Facility Item -->
-                    <div
-                        class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
+                    <!-- Trigger Element -->
+                    <div class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400"
+                        onclick="openPopup()">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/office-building.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/office-building.png') }}" alt=""
+                                class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Gedung Perkantoran</h3>
                         <div
@@ -488,10 +495,22 @@
                         </div>
                     </div>
 
+                    <!-- Popup Modal -->
+                    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center hidden z-50">
+                        <div class="bg-white p-8 rounded-lg shadow-lg relative">
+                            <button class="absolute top-2 right-2 text-gray-500" onclick="closePopup()">[ X ]</button>
+                            <div>
+                                <iframe
+                                    src="https://momento360.com/e/u/00e3c4885c764e159cd553d423e1b4a3?utm_campaign=embed&utm_source=other&heading=528.12&pitch=0.28&field-of-view=75&size=medium&display-plan=true"
+                                    class="lg:w-[900px] lg:h-[450px] w-[280px] h-[150px] md:w-[560px] md:h-[380px]" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/school.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/school.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700 text-sm">Gedung Sekolah Luar Biasa</h3>
                         <div
@@ -503,7 +522,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/hotels.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/hotels.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700 text-sm">Gedung Asrama Putra</h3>
                         <div
@@ -515,7 +534,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/mosque.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/mosque.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Masjid</h3>
                         <div
@@ -527,7 +546,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/government.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/government.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Aula</h3>
                         <div
@@ -539,7 +558,8 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/musical-note (1).png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/musical-note (1).png') }}" alt=""
+                                class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Ruang Musik</h3>
                         <div
@@ -551,7 +571,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/fork.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/fork.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Ruang Makan</h3>
                         <div
@@ -563,7 +583,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/computer.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/computer.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700 text-xs">Laboratorium Komputer Braille</h3>
                         <div
@@ -575,7 +595,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/dumbbell.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/dumbbell.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Ruang Fitness</h3>
                         <div
@@ -587,7 +607,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/open-book.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/open-book.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Perpustakaan</h3>
                         <div
@@ -599,7 +619,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/clinic.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/clinic.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Klinik Kesehatan</h3>
                         <div
@@ -611,7 +631,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/car.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/car.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Mobil Operasional</h3>
                         <div
@@ -626,7 +646,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/building.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/building.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Gedung Diklat</h3>
                         <div
@@ -638,7 +658,7 @@
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
-                            <img src="{{ asset('icon/stay-house.png') }}" alt="" class="h-20 w-auto">
+                            <img src="{{ asset('image/icon/stay-house.png') }}" alt="" class="h-20 w-auto">
                         </div>
                         <h3 class="text-gray-700">Guest House</h3>
                         <div
@@ -679,8 +699,9 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <!-- Large item -->
                 <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC06290.JPG') }}" alt="Nature"
-                        class="w-full h-full object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-1.JPG') }}"
+                        class="w-full h-full object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -691,7 +712,9 @@
 
                 <!-- Two small items -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC04537.JPG') }}" alt="Food" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-2.JPG') }}" alt="Food"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -700,8 +723,9 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC04598.JPG') }}" alt="Technology"
-                        class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-3.JPG') }}" alt="Technology"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -712,7 +736,9 @@
 
                 <!-- Three medium items -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC06807.JPG') }}" alt="Travel" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-4.JPG') }}" alt="Travel"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -721,7 +747,9 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC06808.JPG') }}" alt="Art" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-5.jpg') }}" alt="Art"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -730,9 +758,11 @@
                     </div>
                 </div>
 
-                <!-- bottom cards -->
+                <!-- Bottom cards -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC07366.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-6.JPG') }}" alt="Sport"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -741,7 +771,9 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC07358.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-7.JPG') }}" alt="Sport"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -750,369 +782,56 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC06901.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-8.JPG') }}" alt="Sport"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
-
                         </div>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="{{ asset('prspdnf/DSC07029.JPG') }}" alt="Sport" class="w-full h-48 object-cover">
+                    <img src="{{ asset('Image/prspdnf/galeri-9.JPG') }}" alt="Sport"
+                        class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
+                        loading="lazy" onload="this.style.opacity=1">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-0 left-0 right-0 p-4">
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     {{-- gallery end --}}
 
     {{-- news start --}}
-    <div id="section-berita" class="container mx-auto py-8 px-4" data-aos="fade-up">
-        <!-- Title -->
-        <h1 class="lg:text-3xl md:text-2xl text-xl font-bold text-center w-full mb-8 lg:mb-16">
-            Ketahui kegiatan-kegiatan apa saja yang sedang berlangsung di Fajar Harapan
-        </h1>
-
-        <!-- Grid layout for Trending and Events -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <!-- Trending Card -->
-            <div class="col-span-2">
-                <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div
-                        class="absolute top-2 left-2 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Trending
-                    </div>
-                    <div class="relative group">
-                        <img src="{{ asset('Image/img1.jpg') }}" alt=""
-                            class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                            <div>
-                                <h2 class="text-white lg:text-2xl font-semibold mb-2">
-                                    Pelatihan Keterampilan Baru untuk Penyandang Disabilitas di Fajar Harapan
-                                </h2>
-                                <p class="text-sm text-white mb-4">25 September 2024</p>
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <span class="mr-2">👤 Admin</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- List of Event Cards -->
-            <div class="col-span-2 space-y-4">
-                <!-- Event Card 1 -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
-                    <div class="bg-gray-300 w-20 h-20 flex-shrink-0">
-                        <img src="{{ asset('Image/img1.jpg') }}" alt="" class="w-full h-full">
-                    </div>
-                    <div class="ml-4">
-                        <h3 class="lg:text-lg text-sm font-semibold">
-                            Pelatihan Keterampilan Baru untuk Penyandang Disabilitas di Fajar Harapan
-                        </h3>
-                        <div class="text-xs text-gray-500 items-center mt-1">
-                            <span class="mr-2">🕒 2024-09-24 03:25:00</span>
-                            <span>👤 Admin</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 2 -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
-                    <div class="bg-gray-300 w-20 h-20 flex-shrink-0">
-                        <img src="{{ asset('Image/img1.jpg') }}" alt="" class="w-full h-full">
-                    </div>
-                    <div class="ml-4">
-                        <h3 class="lg:text-lg text-sm font-semibold">
-                            Pelatihan Keterampilan Baru untuk Penyandang Disabilitas di Fajar Harapan
-                        </h3>
-                        <div class="text-xs text-gray-500 items-center mt-1">
-                            <span class="mr-2">🕒 2024-09-24 03:25:00</span>
-                            <span>👤 Admin</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
-                    <div class="bg-gray-300 w-20 h-20 flex-shrink-0">
-                        <img src="{{ asset('Image/img1.jpg') }}" alt="" class="w-full h-full">
-                    </div>
-                    <div class="ml-4">
-                        <h3 class="lg:text-lg text-sm font-semibold">
-                            Pelatihan Keterampilan Baru untuk Penyandang Disabilitas di Fajar Harapan
-                        </h3>
-                        <div class="text-xs text-gray-500 items-center mt-1">
-                            <span class="mr-2">🕒 2024-09-24 03:25:00</span>
-                            <span>👤 Admin</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 2 -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
-                    <div class="bg-gray-300 w-20 h-20 flex-shrink-0">
-                        <img src="{{ asset('Image/img1.jpg') }}" alt="" class="w-full h-full">
-                    </div>
-                    <div class="ml-4">
-                        <h3 class="lg:text-lg text-sm font-semibold">
-                            Pelatihan Keterampilan Baru untuk Penyandang Disabilitas di Fajar Harapan
-                        </h3>
-                        <div class="text-xs text-gray-500 items-center mt-1">
-                            <span class="mr-2">🕒 2024-09-24 03:25:00</span>
-                            <span>👤 Admin</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- "Berita Lainnya" Button -->
-        {{-- <div class="text-right mt-8">
-            <button class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition">
-                Berita Lainnya
-            </button>
-        </div> --}}
-    </div>
+    {{-- <x-news></x-news> --}}
     {{-- news end --}}
 
     {{-- review  start --}}
-    <style>
-        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-            width: 16px !important;
-            height: 4px !important;
-            border-radius: 5px !important;
-            margin: 0 6px !important;
-        }
+    <x-review></x-review>
 
-        .swiper-pagination {
-            bottom: 2px !important;
-        }
-
-        .swiper-wrapper {
-            height: max-content !important;
-            width: max-content !important;
-            padding-bottom: 64px;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: #4F46E5 !important;
-        }
-
-        .swiper-slide.swiper-slide-active>.slide_active\:border-indigo-600 {
-            --tw-border-opacity: 1;
-            border-color: rgb(79 70 229 / var(--tw-border-opacity));
-        }
-
-        .swiper-slide.swiper-slide-active>.group .slide_active\:text-gray-800 {
-            ---tw-text-opacity: 1;
-            color: rgb(31 41 55 / var(--tw-text-opacity));
-        }
-    </style>
-    
-    <section class=" bg-white lg:mt-4 mx-4 lg:mx-12 rounded-xl shadow-xl md:mx-8">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="py-8 lg:py-12 ">
-                <h2 class="text-xl lg:text-3xl md:text-2xl text-center font-bold text-gray-900 "> Apa yang dikatakan
-                    oleh <span class="text-orange-500">Client kami?</span></h2>
-            </div>
-            <!--Slider wrapper-->
-            <div class="swiper mySwiper lg:pb-8 pb-2">
-                <div class="swiper-wrapper w-max">
-                    <div class="swiper-slide">
-                        <div
-                            class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto hover:border-indigo-600 hover:shadow-sm slide_active:border-indigo-600">
-                            <div class="">
-                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
-                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
-                                </div>
-                                <p
-                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
-                                    Pagedone has made it possible for me to stay on top of my portfolio and make
-                                    informed
-                                    decisions
-                                    quickly and easily.
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
-                                <img class="rounded-full h-10 w-10 object-cover"
-                                    src="https://pagedone.io/asset/uploads/1696229969.png" alt="avatar" />
-                                <div class="block">
-                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Jane D</h5>
-                                    <span class="text-sm leading-4 text-gray-500">CEO </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div
-                            class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500  w-full mx-auto hover:border-indigo-600 slide_active:border-indigo-600 hover:shadow-sm">
-                            <div class="">
-                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
-                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
-                                </div>
-                                <p
-                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
-                                    Thanks to pagedone, I feel more informed and confident about my investment decisions
-                                    than
-                                    ever
-                                    before.
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
-                                <img class="rounded-full h-10 w-10 object-cover"
-                                    src="https://pagedone.io/asset/uploads/1696229994.png" alt="avatar" />
-                                <div class="block">
-                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Harsh P.
-                                    </h5>
-                                    <span class="text-sm leading-4 text-gray-500">Product Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div
-                            class=" flex justify-between flex-col lg:w-full group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm">
-                            <div class="">
-                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
-                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
-                                </div>
-                                <p
-                                    class="text-base text-gray-600 leading-6  transition-all duration-500  pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
-                                    The customer service team at pagedone went above and beyond to help me resolve a
-                                    billing
-                                    issue.
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
-                                <img class="rounded-full h-10 w-10 object-cover"
-                                    src="	https://pagedone.io/asset/uploads/1696230027.png" alt="avatar" />
-                                <div class="block">
-                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Alex K.
-                                    </h5>
-                                    <span class="text-sm leading-4 text-gray-500">Design Lead</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div
-                            class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm">
-                            <div class="">
-                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
-                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
-                                </div>
-                                <p
-                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
-                                    Pagedone has made it possible for me to stay on top of my portfolio and make
-                                    informed
-                                    decisions
-                                    quickly and easily.
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
-                                <img class="rounded-full h-10 w-10 object-cover"
-                                    src="https://pagedone.io/asset/uploads/1696229969.png" alt="avatar" />
-                                <div class="block">
-                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Jane D</h5>
-                                    <span class="text-sm leading-4 text-gray-500">CEO </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div
-                            class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm ">
-                            <div class="">
-                                <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
-                                    <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <span class="text-base font-semibold text-indigo-600">4.9</span>
-                                </div>
-                                <p
-                                    class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
-                                    Thanks to pagedone, I feel more informed and confident about my investment decisions
-                                    than
-                                    ever
-                                    before.
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
-                                <img class="rounded-full h-10 w-10 object-cover"
-                                    src="https://pagedone.io/asset/uploads/1696229994.png" alt="avatar" />
-                                <div class="block">
-                                    <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Harsh P.
-                                    </h5>
-                                    <span class="text-sm leading-4 text-gray-500">Product Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination py-8"></div>
-            </div>
-        </div>
-    </section>
-    {{-- review end --}}
-
-    <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-xl shadow-xl md:mx-8 mx-4 lg:mx-40 my-12">
+    <div class="flex flex-col lg:flex-row items-center bg-[#5959CD] rounded-xl shadow-xl md:mx-4 mx-4 lg:mx-32 my-12">
         <div class="flex lg:w-1/2 w-full lg:h-auto lg:mb-0 rounded-xl">
-            <img src="{{ asset('icon/dd.png') }}" alt=""
+            <img src="{{ asset('Image/icon/dd.png') }}" alt="Image"
                 class="w-full h-auto lg:h-96 md:h-72 object-cover rounded-t-xl lg:rounded-xl">
         </div>
         <div class="lg:w-1/2 w-full text-white rounded-lg lg:px-12 p-6 lg:py-0">
-            <h2 class="text- lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
+            <h2 class="text-sm lg:text-md uppercase font-semibold tracking-wider text-center lg:text-left">
                 Kami adalah jawaban terbaik yang pernah Anda temukan
             </h2>
-            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left my-6">
+            <h1 class="text-xl md:text-xl lg:text-2xl font-bold text-center lg:text-left my-6">
                 Tunggu apalagi? <br> <span class="text-orange-400">Segera bergabung</span> bersama keluarga besar kami
                 sekarang dan rasakan perubahan yang terjadi di hidup Anda!
             </h1>
-            <div class="flex text-sm lg:text-base justify-center lg:justify-start mt-8">
-                <button class="bg-orange-400 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-orange-500">
-                    Daftar Sekarang
-                </button>
-            </div>
         </div>
     </div>
+
 
     {{-- kerjasama --}}
     <section class="py-6 rounded-xl mx-4 md:mx-8 lg:mx-12 my-8 bg-white shadow-xl" data-aos="fade-up">
@@ -1125,61 +844,62 @@
             </div>
 
             <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused">
-                <img loading="lazy" src="{{ asset('logo-sponsor/LOGO KABUPATEN BALANGAN.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image0">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/LOGO KABUPATEN BALANGAN.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image0">
                 <img loading="lazy"
-                    src="{{ asset('logo-sponsor/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image1">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Kab Hulu Sungai Tengah.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image2">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image3">
-                <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru-removebg-preview.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image4">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image5">
-                <img loading="lazy" src="{{ asset('logo-sponsor/LOGO_KAB_BANJAR.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image6">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Kotabaru.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image7">
-                <img loading="lazy" src="{{ asset('logo-sponsor/kabupaten barito kuala.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image8">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah_bumbu.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah-laut.png') }}" class="max-w-none h-16 lg:h-32"
-                    alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tabalong.png') }}" class="max-w-none h-16 lg:h-32"
-                    alt="image9">
+                    src="{{ asset('Image/logo-dinas/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image1">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Kab Hulu Sungai Tengah.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image2">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image3">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/banjarbaru-removebg-preview.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image4">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Banjarmasin.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image5">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/LOGO_KAB_BANJAR.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image6">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Lambang_Kabupaten_Kotabaru.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image7">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/kabupaten barito kuala.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image8">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/tanah_bumbu.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image9">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/tanah-laut.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image9">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/tabalong.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image9">
             </div>
 
             <!-- Hidden Scrolling Images for Loop -->
             <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused" aria-hidden="true">
-                <img loading="lazy" src="{{ asset('logo-sponsor/LOGO KABUPATEN BALANGAN.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image0">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/LOGO KABUPATEN BALANGAN.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image0">
                 <img loading="lazy"
-                    src="{{ asset('logo-sponsor/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image1">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Kab Hulu Sungai Tengah.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image2">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image3">
-                <img loading="lazy" src="{{ asset('logo-sponsor/banjarbaru-removebg-preview.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image4">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Banjarmasin.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image5">
-                <img loading="lazy" src="{{ asset('logo-sponsor/LOGO_KAB_BANJAR.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image6">
-                <img loading="lazy" src="{{ asset('logo-sponsor/Lambang_Kabupaten_Kotabaru.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image7">
-                <img loading="lazy" src="{{ asset('logo-sponsor/kabupaten barito kuala.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image8">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah_bumbu.png') }}"
-                    class="max-w-none h-16 lg:h-32" alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tanah-laut.png') }}" class="max-w-none h-16 lg:h-32"
-                    alt="image9">
-                <img loading="lazy" src="{{ asset('logo-sponsor/tabalong.png') }}" class="max-w-none h-16 lg:h-32"
-                    alt="image9">
+                    src="{{ asset('Image/logo-dinas/download-logo-kabupaten-hulu-sungai-utara-enkosa.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image1">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Kab Hulu Sungai Tengah.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image2">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Lambang_Kabupaten_Hulu_Sungai_Selatan.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image3">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/banjarbaru-removebg-preview.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image4">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Banjarmasin.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image5">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/LOGO_KAB_BANJAR.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image6">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/Lambang_Kabupaten_Kotabaru.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image7">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/kabupaten barito kuala.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image8">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/tanah_bumbu.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image9">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/tanah-laut.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image9">
+                <img loading="lazy" src="{{ asset('Image/logo-dinas/tabalong.png') }}"
+                    class="max-w-none h-16 md:h-24 lg:h-32" alt="image9">
             </div>
+
 
 
             <div
@@ -1190,14 +910,13 @@
     {{-- kerjasama end --}}
 
     {{-- footer start --}}
-    <footer class="bg-[#697077] dark:bg-gray-900">
+    <footer class="bg-[#697077]">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <!-- Logo Section -->
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <!-- Logo with responsive sizing -->
-                    <img src="{{ asset('icon/Logo PRSPDNF FH.ico')}}" class="h-8 md:h-10 lg:h-12"
-                        alt="PRSPDNF Logo" />
+                    <img src="{{ asset('Image/icon/Logo PRSPDNF-FH.png') }}" class="h-8 md:h-10 lg:h-12" alt="PRSPDNF Logo" />
 
                     <div class="flex flex-col items-center">
                         <!-- Text with responsive font sizes -->
@@ -1207,7 +926,7 @@
 
                 </a>
                 <!-- Extended Horizontal Line -->
-                <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8 w-full" />
+                <hr class="my-6 border-white sm:mx-auto lg:my-8 w-full" />
             </div>
 
             <div class="flex flex-col md:flex-row md:justify-between">
@@ -1305,7 +1024,7 @@
                                         clip-rule="evenodd" />
                                 </svg>
 
-                                <span class="sr-only">Twitter page</span>
+                                <span class="sr-only">youtube</span>
                             </a>
 
                             <a href="https://www.instagram.com/prspdnffajarharapan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -1324,7 +1043,7 @@
             </div>
 
             <!-- Footer Bottom -->
-            <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <hr class="my-6 border-white sm:mx-auto lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between flex flex-col-reverse sm:flex-row">
                 <span class="lg:text-sm md-text-sm text-xs text-white sm:text-center dark:text-white">
                     © 2024 <a href="#" class="hover:underline">Magang PRSPDNF FH</a> @ All Rights Reserved.
@@ -1347,6 +1066,15 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        function openPopup() {
+            document.getElementById('popup').classList.remove('hidden');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+    </script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -1378,5 +1106,7 @@
         });
     </script>
     @vite(['resources/js/app.js', 'resources/js/custom/custom.js'])
+    <script src="js/fetchBerita.js"></script>
 </body>
+
 </html>
