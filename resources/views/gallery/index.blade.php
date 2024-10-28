@@ -15,7 +15,9 @@
     <title>PRSPDNF</title>
 </head>
 
-<body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen">
+<body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen"
+    style="background-image: url('{{ asset('Image/Background/bg-page.png') }}'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
 
     <x-navbar></x-navbar>
 
@@ -145,8 +147,8 @@
     </script>
 
 
-
-    <x-card-all></x-card-all>
+{{-- 
+    <x-card-all></x-card-all> --}}
 
     <x-footer></x-footer>
 

@@ -2,14 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $news = app(NewsController::class)->getNewsData();
+
+        $recentNewsHeader = News::with('category')
+        ->orderByDesc('created_at')
+        ->take(12)
+        ->get();
+        
+        return view('index', compact('news', 'recentNewsHeader'));
     }
+
 
     public function sejarah()
     {

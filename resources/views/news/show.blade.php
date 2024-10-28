@@ -67,6 +67,8 @@
 
     <x-navbar></x-navbar>
 
+    
+
     <section class=" lg:px-32">
         <div class="flex flex-wrap -mx-4 lg:pt-32 pt-20">
             <!-- Bagian Konten Utama -->

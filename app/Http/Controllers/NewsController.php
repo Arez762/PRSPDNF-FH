@@ -11,14 +11,13 @@ use Illuminate\Validation\ValidationException;
 class NewsController extends Controller
 {
     // Menampilkan daftar berita
-    public function index(Request $request)
+    public function index(Request $request, $forHome = false)
     {
         $search = $request->input('search');
 
-        // Ambil semua berita beserta kategori
+        // Query utama untuk berita
         $newsQuery = News::with('category')->orderByDesc('created_at');
 
-        // Jika ada kata kunci pencarian, filter berita
         if ($search) {
             $newsQuery->where(function ($query) use ($search) {
                 $query->where('name', 'like', '%' . $search . '%')
@@ -26,13 +25,14 @@ class NewsController extends Controller
             });
         }
 
-        $news = $newsQuery->paginate(12); // Batasi 12 berita per halaman
+        $news = $newsQuery->paginate(12);
 
-        // Jika request meminta JSON (misalnya untuk API)
+        // Jika ini adalah request JSON (misalnya API)
         if ($request->wantsJson()) {
             return response()->json($news);
         }
 
+        // Konten tambahan berdasarkan halaman
         $topViewsNews = News::with('category')
             ->orderByDesc('views')
             ->take(5)
@@ -50,6 +50,7 @@ class NewsController extends Controller
 
         $categories = Category::withCount('news')->get();
 
+        // Mengelompokkan berita berdasarkan kategori untuk halaman utama
         $newsByCategory = [];
         foreach ($categories as $category) {
             $newsByCategory[$category->id] = News::with('category')
@@ -59,8 +60,15 @@ class NewsController extends Controller
                 ->get();
         }
 
+        // Tentukan tampilan yang berbeda berdasarkan halaman
+        if ($forHome) {
+            return view('index', compact('news', 'categories', 'topViewsNews', 'recentNews', 'recentNewsHeader', 'newsByCategory'));
+        }
+
+        // Jika bukan halaman utama, tampilkan di news.index
         return view('news.index', compact('news', 'categories', 'topViewsNews', 'recentNews', 'search', 'recentNewsHeader', 'newsByCategory'));
     }
+
 
     // Menyimpan berita baru melalui API
     public function store(Request $request)
@@ -203,5 +211,17 @@ class NewsController extends Controller
         }
 
         return view('news.search', compact('news', 'categories', 'search', 'recentNews', 'popularNews'));
+    }
+
+    public function getNewsData($search = null)
+    {
+        $newsQuery = News::with('category')->orderByDesc('created_at');
+        if ($search) {
+            $newsQuery->where(function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%')
+                    ->orWhere('content', 'like', '%' . $search . '%');
+            });
+        }
+        return $newsQuery->paginate(12);
     }
 }

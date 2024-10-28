@@ -25,3 +25,6 @@ Route::get('aboutus', [ProfileController::class, 'aboutUs']);
 
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+
+Route::get('/', [NewsController::class, 'index'])->name('index')->defaults('forHome', true);
+

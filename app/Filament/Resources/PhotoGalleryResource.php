@@ -79,7 +79,6 @@ class PhotoGalleryResource extends Resource
                     ->visible(fn($record) => $record->trashed()), // Hanya tampil untuk data yang dihapus sementara
                 Tables\Actions\ForceDeleteAction::make()
                     ->visible(fn($record) => $record->trashed())// Hanya tampil untuk data yang dihapus sementara
-                    ->visible(fn() => Auth::user()->role === 'admin'),
                     
             ])
             ->bulkActions([

@@ -99,7 +99,7 @@
         </div>
     </section>
 
-    <x-card-all></x-card-all>
+    {{-- <x-card-all></x-card-all> --}}
 
     <x-footer></x-footer>
 

@@ -97,8 +97,8 @@
                             <h1 class="title-font text-base lg:text-lg font-medium text-white mb-2 hover:text-gray-300">
                                 {{ Str::words($newsItem->name, 15) }}
                             </h1>
-                            <p class="text-xs text-white lg:text-lg mb-4 hover:text-gray-300">
-                                {!! Str::limit($newsItem->content, 100) !!}
+                            <p class="text-xs text-white lg:text-sm mb-4 hover:text-gray-300">
+                                {!! Str::limit(strip_tags($newsItem->content), 100) !!}
                             </p>
                         </a>
 
@@ -131,6 +131,7 @@
                 </div>
             @endforeach
         </div>
+        
         <div class="pagination my-4 flex gap-2">
             @foreach ($recentNewsHeader as $key => $newsItem)
                 <span

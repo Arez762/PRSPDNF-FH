@@ -15,10 +15,10 @@
     <title>PRSPDNF</title>
 </head>
 
-<body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen">
+<body class="bg-[#F3F4F8] font-poppins flex flex-col min-h-screen"
+    style="background-image: url('{{ asset('Image/Background/bg-page.png') }}'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
 
     <x-navbar></x-navbar>
-
 
     <section class="relative bg-cover bg-center lg:h-96 h-48 lg:pt-24 pt-2"
         style="background-image: url('{{ asset('Image/Background/Nav-bg.jpg') }}');">
@@ -32,7 +32,67 @@
             <h1 class="text-xl lg:text-5xl font-semibold lg:mt-6 mt-2">Persyaratan Umum & Administrasi</h1>
         </div>
     </section>
-    <x-card-all></x-card-all>
+
+    <section>
+        <div class="w-full h-auto flex lg:flex-row flex-col p-8 gap-8 my-12 lg:px-32">
+            <div
+                class="border-2 border-[#FC6C3F] lg:w-[50%] w-full h-auto rounded-xl p-4  lg:px-8 bg-white/30 backdrop-blur-lg" data-aos="fade-down">
+                <div class="">
+                    <div class="text-center font-bold text-3xl text-[#FC6C3F] py-4 w-full">Persyaratan Administrasi
+                    </div>
+                    <div class="py-4 font-bold text-[#FC6C3F] text-xl">Disabilitas Netra</div>
+                    <ol class="list-decimal ml-4 text-gray-700">
+                        <li>Disabilitas Netra potensial: mampu didik dan mampu latih.</li>
+                        <li>Tidak memiliki kedisabilitasan lain (tidak ganda: netra disertai disabilitas
+                            intelektual,
+                            rungu wicara).</li>
+                        <li>Usia 7 s/d 45 Tahun (diatas usia 35 tahun program percepatan).</li>
+                        <li>Berbadan sehat dan tidak mempunyai penyakit menular (surat keterangan berbadan sehat
+                            dari
+                            dokter/ Puskesmas/ Rumah Sakit).</li>
+                        <li>Jenis kelamin laki-laki dan perempuan.</li>
+                    </ol>
+                </div>
+
+                <div class="">
+                    <div class="py-4 mt-2 font-bold text-[#FC6C3F] text-xl">Disabilitas Fisik</div>
+                    <ol class="list-decimal ml-4 text-gray-700">
+                        <li>Tidak memiliki kedisabilitasan lain (tidak ganda: fisik disertai disabilitas
+                            intelektual,
+                            rungu wicara).</li>
+                        <li>Usia 15 s/d 35 tahun (Program vokasional).</li>
+                        <li>Berbadan sehat dan tidak mempunyai penyakit menular (keterangan dokter).</li>
+                        <li>Jenis kelamin laki-laki dan perempuan.</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div
+                class="border-2 border-[#FC6C3F] lg:w-[50%] w-full h-auto rounded-xl p-4 lg:px-8 bg-white/30 backdrop-blur-lg" data-aos="fade-up">
+                <div class="">
+                    <div class="text-center font-bold text-3xl text-[#FC6C3F] py-4 w-full">Persyaratan Umum
+                    </div>
+                    <div class="py-3"></div>
+                    <ol class="list-decimal ml-4 text-gray-700">
+                        <li>Mengisi formulir yang telah disediakan.</li>
+                        <li>Surat penyataan tidak menikah selama mengikuti program Rehabilitasi Sosial.</li>
+                        <li>Surat perjanjian selama mengikuti program rehabilitasi sosial.</li>
+                        <li>Surat keterangan berbadan sehat dari Dokter/Puskesmas/Rumah Sakit.</li>
+                        <li>Akte kelahiran/Surat Keterangan Kenal Lahir.</li>
+                        <li>Ijazah/STTB/Sertifikat/Piagam yang dimiliki (bila ada).</li>
+                        <li>Foto copy Kartu Keluarga.</li>
+                        <li>Foto copy KTP yang usia sudah 17 tahun.</li>
+                        <li>Kartu BPJS Kesehatan.</li>
+                        <li>Pas Photo ukuran 4x6 sebanyak 3 lembar.</li>
+                        <li>Surat pengantar/Rekomendasi Dinas Sosial Kabupaten/Kota.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- <x-card-all></x-card-all> --}}
     <x-footer></x-footer>
 
 

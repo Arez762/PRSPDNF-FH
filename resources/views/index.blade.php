@@ -234,7 +234,7 @@
                     <div class="space-y-2 relative">
                         <!-- Button 1 -->
                         <button id="dropdownLeftEndButton1" data-dropdown-toggle="dropdownLeftEnd1"
-                            class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
+                            class="flex me-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
                             type="button">
                             <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -245,40 +245,51 @@
                         </button>
 
                         <div id="dropdownLeftEnd1"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 rounded-b-xl">
-                            <div class="border-2 rounded-b-xl border-[#FC6C3F]">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 rounded-b-xl shadow-lg transition-transform duration-300 ease-in-out">
+                            <div
+                                class="border-2 rounded-b-xl border-[#FC6C3F] bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-700">
+                                <ul class="py-3 text-sm text-gray-700 dark:text-gray-200 text-start space-y-2"
                                     aria-labelledby="dropdownLeftEndButton1">
-                                    <li>
-                                        <p class="block px-4 py-1 underline">Olahraga Kesehatan Jasmani</p>
-                                        <p class="block px-4 pb-1">Program ini bertujuan untuk menjaga kebugaran tubuh
-                                            dan kesehatan jasmani
-                                            melalui aktivitas fisik teratur, seperti senam atau latihan ringan.</p>
+                                    <li class="px-4">
+                                        <p class="font-semibold text-[#FC6C3F] underline">Olahraga Kesehatan Jasmani
+                                        </p>
+                                        <p class="pt-1 text-gray-600 dark:text-gray-300">Program ini bertujuan untuk
+                                            menjaga kebugaran tubuh dan
+                                            kesehatan jasmani melalui aktivitas fisik teratur, seperti senam atau
+                                            latihan ringan.</p>
                                     </li>
-                                    <li>
-                                        <p class="block px-4 py-1 underline">Olahraga Prestasi (Atletik, Judo, Renang,
-                                            dan Tenis Meja Netra)</p>
-                                        <div class="block px-4 pb-1 mt-1">
-                                            <ul class="list-disc pl-5">
-                                                <li><strong>Atletik:</strong> Latihan dan pengembangan kemampuan dasar
-                                                    atletik seperti lari,
-                                                    lompat, dan lempar.</li>
-                                                <li><strong>Judo:</strong> Latihan teknik-teknik bela diri judo yang
-                                                    disesuaikan dengan kebutuhan
-                                                    peserta didik.</li>
-                                                <li><strong>Renang:</strong> Pembelajaran teknik berenang yang bertujuan
-                                                    untuk meningkatkan
-                                                    kepercayaan diri dan kemampuan berenang.</li>
-                                                <li><strong>Tenis Meja Netra:</strong> Latihan dan pengembangan
-                                                    kemampuan bermain tenis meja untuk
-                                                    peserta didik dengan gangguan penglihatan, menggunakan teknik dan
-                                                    peralatan khusus.</li>
+                                    <li class="px-4">
+                                        <p class="font-semibold text-[#FC6C3F] underline">Olahraga Prestasi (Atletik,
+                                            Judo, Renang, dan Tenis
+                                            Meja Netra)</p>
+                                        <div class="pt-1 text-gray-600 dark:text-gray-300 mt-1">
+                                            <ul class="list-disc pl-5 space-y-1">
+                                                <li><strong class="text-gray-800 dark:text-gray-200">Atletik:</strong>
+                                                    Latihan dan pengembangan
+                                                    kemampuan dasar atletik seperti lari, lompat, dan lempar.
+                                                </li>
+                                                <li><strong class="text-gray-800 dark:text-gray-200">Judo:</strong>
+                                                    Latihan teknik-teknik bela
+                                                    diri judo yang disesuaikan dengan kebutuhan peserta didik.
+                                                </li>
+                                                <li><strong class="text-gray-800 dark:text-gray-200">Renang:</strong>
+                                                    Pembelajaran teknik
+                                                    berenang yang bertujuan untuk meningkatkan kepercayaan diri dan
+                                                    kemampuan berenang.
+                                                </li>
+                                                <li><strong class="text-gray-800 dark:text-gray-200">Tenis Meja
+                                                        Netra:</strong> Latihan dan
+                                                    pengembangan kemampuan bermain tenis meja untuk peserta didik dengan
+                                                    gangguan penglihatan,
+                                                    menggunakan teknik dan peralatan khusus.
+                                                </li>
                                             </ul>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+
 
                         <button id="dropdownLeftEndButton2" data-dropdown-toggle="dropdownLeftEnd2"
                             class="flex me-3 mb-3 md:mb-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center w-full text-black bg-white border-2 border-[#FC6C3F] hover:bg-[#FC6C3F] hover:text-white"
@@ -292,31 +303,31 @@
                         </button>
 
                         <div id="dropdownLeftEnd2"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 transition-transform duration-300 ease-in-out">
                             <div class="border-2 rounded-b-xl border-[#FC6C3F]">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
                                     aria-labelledby="dropdownLeftEndButton2">
                                     <li>
-                                        <p class="block px-4 py-1 underline">Baca tulis Al Qur'an</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Baca tulis Al Qur'an</p>
                                         <p class="block px-4 pb-1">Program untuk membantu peserta didik dalam belajar
                                             membaca dan menulis huruf hijaiyah hingga dapat membaca Al-Qur'an dengan
                                             baik.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Pembacaan Maulid</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Pembacaan Maulid</p>
                                         <p class="block px-4 pb-1">Kegiatan pembacaan syair-syair maulid untuk
                                             memperdalam pemahaman sejarah dan nilai-nilai kehidupan Rasulullah.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Ceramah Agama</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Ceramah Agama</p>
                                         <p class="block px-4 pb-1">Penyampaian ceramah agama untuk memperkuat keimanan
                                             dan memberikan pemahaman yang baik mengenai ajaran agama.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Tuntunan Ibadah</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Tuntunan Ibadah</p>
                                         <p class="block px-4 pb-1">Pembinaan yang berfokus pada pengenalan dan praktik
                                             ibadah sehari-hari seperti sholat, wudhu, dan doa.</p>
                                     </li>
@@ -336,26 +347,28 @@
                         </button>
 
                         <div id="dropdownLeftEnd3"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 transition-all duration-300 ease-in-out">
                             <div class="border-2 rounded-b-xl border-[#FC6C3F]">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
                                     aria-labelledby="dropdownLeftEndButton3">
                                     <li>
-                                        <p class="block px-4 py-1 underline">Orientasi Mobilitas</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Orientasi Mobilitas</p>
                                         <p class="block px-4 pb-1">Pelatihan untuk membantu peserta didik dalam
                                             mengenali lingkungan sekitar serta mengembangkan kemampuan bergerak secara
                                             mandiri.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Activity of Daily Living (ADL)</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Activity of Daily Living
+                                            (ADL)</p>
                                         <p class="block px-4 pb-1">Pembelajaran dan pelatihan kegiatan sehari-hari
                                             seperti berpakaian, makan, dan menjaga kebersihan diri agar peserta didik
                                             dapat lebih mandiri.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Pembinaan Kepercayaan Diri dan Motivasi
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Pembinaan Kepercayaan Diri
+                                            dan Motivasi
                                         </p>
                                         <p class="block px-4 pb-1">Program yang berfokus pada pengembangan rasa percaya
                                             diri dan motivasi diri melalui kegiatan yang membangun semangat serta sikap
@@ -377,40 +390,41 @@
                         </button>
 
                         <div id="dropdownLeftEnd4"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 transition-all duration-300 ease-in-out">
                             <div class="border-2 rounded-b-xl border-[#FC6C3F]">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
                                     aria-labelledby="dropdownLeftEndButton4">
                                     <li>
-                                        <p class="block px-4 py-1 underline">Menjahit</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Menjahit</p>
                                         <p class="block px-4 pb-1"> Pembelajaran keterampilan menjahit untuk
                                             menghasilkan berbagai jenis pakaian atau kerajinan tangan.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Komputer</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Komputer</p>
                                         <p class="block px-4 pb-1">Pelatihan dasar penggunaan komputer dan aplikasi
                                             yang berguna untuk menunjang keahlian di bidang teknologi informasi.</p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">Tata Boga</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Tata Boga</p>
                                         <p class="block px-4 pb-1">Pelatihan memasak dan menyiapkan hidangan, yang
                                             meliputi teori dasar hingga praktik memasak berbagai jenis makanan.</p>
                                     </li>
                                     <li>
-                                        <p class="block px-4 py-1 underline">Budidaya Ikan</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Budidaya Ikan</p>
                                         <p class="block px-4 pb-1"> Pengajaran teknik budidaya ikan yang mencakup
                                             pemeliharaan, pemberian pakan, dan pengelolaan kolam.</p>
                                     </li>
                                     <li>
-                                        <p class="block px-4 py-1 underline">Sport Massage dan Shiatsu</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Sport Massage dan Shiatsu
+                                        </p>
                                         <p class="block px-4 pb-1">Pelatihan keterampilan pijat olahraga dan teknik
                                             shiatsu untuk meningkatkan keterampilan dalam bidang kesehatan dan
                                             relaksasi.</p>
                                     </li>
                                     <li>
-                                        <p class="block px-4 py-1 underline">Musik</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">Musik</p>
                                         <p class="block px-4 pb-1">Pembelajaran memainkan alat musik atau bernyanyi,
                                             serta mengembangkan bakat seni musik peserta didik.</p>
                                     </li>
@@ -430,19 +444,21 @@
                         </button>
 
                         <div id="dropdownLeftEnd5"
-                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0">
+                            class="hidden absolute md:left-0 md:top-full md:mt-2 z-50 w-full rounded-b-xl bg-white divide-y divide-gray-100 dark:bg-gray-700 bottom-full left-0 translate-y-[-10px] md:translate-y-0 transition-opacity duration-300 ease-in-out">
                             <div class="border-2 rounded-b-xl border-[#FC6C3F]">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-start"
                                     aria-labelledby="dropdownLeftEndButton5">
                                     <li>
-                                        <p class="block px-4 py-1 underline">SDLB (Sekolah Dasar Luar Biasa)</p>
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">SDLB (Sekolah Dasar Luar
+                                            Biasa)</p>
                                         <p class="block px-4 pb-1">Pendidikan dasar bagi anak berkebutuhan khusus,
                                             memberikan pengajaran yang disesuaikan dengan kemampuan dan kebutuhan siswa.
                                         </p>
                                     </li>
 
                                     <li>
-                                        <p class="block px-4 py-1 underline">SMPLB (Sekolah Menegah Pertama Luar Biasa)
+                                        <p class="block px-4 py-1 underline text-[#FC6C3F]">SMPLB (Sekolah Menegah
+                                            Pertama Luar Biasa)
                                         </p>
                                         <p class="block px-4 pb-1">Pendidikan tingkat menengah pertama yang memberikan
                                             materi pelajaran dengan metode khusus agar peserta didik dapat mengembangkan
@@ -496,17 +512,19 @@
                     </div>
 
                     <!-- Popup Modal -->
-                    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center hidden z-50">
+                    <div id="popup"
+                        class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center hidden z-50">
                         <div class="bg-white p-8 rounded-lg shadow-lg relative">
                             <button class="absolute top-2 right-2 text-gray-500" onclick="closePopup()">[ X ]</button>
                             <div>
                                 <iframe
                                     src="https://momento360.com/e/u/00e3c4885c764e159cd553d423e1b4a3?utm_campaign=embed&utm_source=other&heading=528.12&pitch=0.28&field-of-view=75&size=medium&display-plan=true"
-                                    class="lg:w-[900px] lg:h-[450px] w-[280px] h-[150px] md:w-[560px] md:h-[380px]" frameborder="0"></iframe>
+                                    class="lg:w-[900px] lg:h-[450px] w-[280px] h-[150px] md:w-[560px] md:h-[380px]"
+                                    frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div
                         class="relative p-4 bg-white rounded-lg text-center transition duration-300 hover:scale-105 hover:bg-gray-400">
                         <div class="flex items-center justify-center w-full h-24 rounded mb-2 relative">
@@ -698,7 +716,8 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <!-- Large item -->
-                <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
+                <a href="/gallery"
+                    class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-1.JPG') }}"
                         class="w-full h-full object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -708,10 +727,10 @@
                             <h3 class="lg:text-2xl md:text-2xl text-xl font-bold text-white">Lihat Lebih Banyak</h3>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <!-- Two small items -->
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <!-- Small items -->
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-2.JPG') }}" alt="Food"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -721,8 +740,8 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                </a>
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-3.JPG') }}" alt="Technology"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -732,10 +751,10 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <!-- Three medium items -->
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <!-- Medium items -->
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-4.JPG') }}" alt="Travel"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -745,8 +764,8 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                </a>
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-5.jpg') }}" alt="Art"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -756,10 +775,10 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <!-- Bottom cards -->
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <!-- Additional items -->
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-6.JPG') }}" alt="Sport"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -769,8 +788,8 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                </a>
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-7.JPG') }}" alt="Sport"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -780,8 +799,8 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                </a>
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-8.JPG') }}" alt="Sport"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -791,8 +810,8 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                </a>
+                <a href="/gallery" class="relative overflow-hidden rounded-2xl shadow-lg group">
                     <img src="{{ asset('Image/prspdnf/galeri-9.JPG') }}" alt="Sport"
                         class="w-full h-48 object-cover lazyload transition-opacity duration-500 opacity-0"
                         loading="lazy" onload="this.style.opacity=1">
@@ -802,15 +821,193 @@
                             <h4 class="text-xl font-bold text-white">Lihat Lebih Banyak</h4>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
+
 
     {{-- gallery end --}}
 
     {{-- news start --}}
     {{-- <x-news></x-news> --}}
+    <style>
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, and Opera */
+        }
+    </style>
+    <div class="relative flex p-6 flex-col items-center justify-center lg:px-32 rounded-xl" data-aos="fade-down">
+        <h2 class="lg:text-3xl md:text-2xl text-xl font-extrabold text-gray-900 mb-8">
+            Lihat Berita terbaru di <span class="text-orange-500">Fajar Harapan!</span>
+        </h2>
+        <div class="">
+        </div>
+        <div
+            class="carousel scrollbar-hide flex w-full snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth pb- rounded-xl">
+            @foreach ($recentNewsHeader as $newsItem)
+                <div
+                    class="relative aspect-[1/1] h-96 lg:w-[33%] w-[100%] shrink-0 snap-start snap-always rounded-xl bg-blue-200 overflow-hidden">
+                    <a href="{{ route('news.show', $newsItem->slug) }}" class="hover:no-underline">
+                        <div class="absolute inset-0">
+                            <img src="{{ Storage::url($newsItem->thumbnail) }}" alt="{{ $newsItem->name }}"
+                                class="w-full h-full object-cover transition-opacity duration-500 opacity-0  rounded-xl"
+                                loading="lazy" onload="this.style.opacity=1">
+                        </div>
+                    </a>
+
+                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                    <div class="absolute inset-0 flex flex-col items-start justify-end p-4 text-justify">
+                        <a href="{{ route('news.show', $newsItem->slug) }}" class="hover:no-underline">
+                            <h1
+                                class="title-font text-base lg:text-lg font-medium text-white mb-2 hover:text-gray-300">
+                                {{ Str::words($newsItem->name, 15) }}
+                            </h1>
+                            <p class="text-xs text-white lg:text-sm mb-4 hover:text-gray-300">
+                                {!! Str::limit(strip_tags($newsItem->content), 100) !!}
+                            </p>
+                        </a>
+
+                        <div class="flex w-full justify-start gap-3 lg:gap-6 items-center">
+                            <div class="text-gray-300 lg:text-sm text-xs items-center">
+                                {{ \Carbon\Carbon::parse($newsItem->created_at)->format('d F Y') }}
+                            </div>
+                            <span class="text-gray-300 inline-flex items-center leading-none text-sm">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
+                                    style="outline: none;">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                {{ $newsItem->views }}
+                            </span>
+                            <span class="text-gray-300 inline-flex items-center leading-none text-sm">
+                                <svg class="w-5 h-5 text-gray-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24" style="outline: none;">
+                                    <path stroke="currentColor"
+                                        d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                                {{ $newsItem->user->name }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="pagination my-4 flex gap-2">
+            @foreach ($recentNewsHeader as $key => $newsItem)
+                <span
+                    class="h-3 w-3 ease-out duration-300 rounded-full bg-gray-400 {{ $key === 0 ? 'w-8' : '' }}"></span>
+            @endforeach
+        </div>
+        <div class="flex flex-row w-64 items-center justify-center">
+            <button class="prev-btn hover:text-orange-500 p-2 flex flex-row mr-4">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                </svg> Prev
+            </button>
+            <button class="next-btn hover:text-orange-500 p-2 flex flex-row">Next
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="mt-4 hover:text-orange-500 hover:border-orange-500 p-2 rounded-lg border-2 border-gray-700 ">
+            <a href="/news">
+                <button class="">Berita Lainnya</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript carousel script
+        const container = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel > div');
+        const dots = document.querySelectorAll('.pagination > span');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        const autoScrollInterval = 3000;
+        let autoScroll;
+
+        prevBtn.addEventListener('click', () => {
+            scrollToPrev();
+            resetAutoScroll();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            scrollToNext();
+            resetAutoScroll();
+        });
+
+        function startAutoScroll() {
+            autoScroll = setInterval(() => {
+                scrollToNext();
+            }, autoScrollInterval);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(autoScroll);
+            startAutoScroll();
+        }
+
+        function scrollToNext() {
+            if (getCenterSlideIndex() === slides.length - 1) {
+                container.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+                updateActiveDot(0);
+            } else {
+                container.scrollBy({
+                    left: slides[0].offsetWidth,
+                    behavior: 'smooth'
+                });
+                updateActiveDot(getCenterSlideIndex() + 1);
+            }
+        }
+
+        function scrollToPrev() {
+            if (getCenterSlideIndex() === 0) {
+                container.scrollTo({
+                    left: container.scrollWidth,
+                    behavior: 'smooth'
+                });
+                updateActiveDot(slides.length - 1);
+            } else {
+                container.scrollBy({
+                    left: -slides[0].offsetWidth,
+                    behavior: 'smooth'
+                });
+                updateActiveDot(getCenterSlideIndex() - 1);
+            }
+        }
+
+        function updateActiveDot(centerSlideIndex) {
+            dots.forEach((dot) => dot.classList.remove('w-8'));
+            dots[centerSlideIndex].classList.add('w-8');
+        }
+
+        function getCenterSlideIndex() {
+            const slideWidth = slides[0].offsetWidth;
+            const containerWidth = container.offsetWidth;
+            return Math.round((container.scrollLeft + containerWidth / 2) / slideWidth);
+        }
+
+        startAutoScroll();
+    </script>
+
     {{-- news end --}}
 
     {{-- review  start --}}
@@ -916,7 +1113,8 @@
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <!-- Logo with responsive sizing -->
-                    <img src="{{ asset('Image/icon/Logo PRSPDNF-FH.png') }}" class="h-8 md:h-10 lg:h-12" alt="PRSPDNF Logo" />
+                    <img src="{{ asset('Image/icon/Logo PRSPDNF-FH.png') }}" class="h-8 md:h-10 lg:h-12"
+                        alt="PRSPDNF Logo" />
 
                     <div class="flex flex-col items-center">
                         <!-- Text with responsive font sizes -->
@@ -1002,7 +1200,7 @@
 
                     <!-- Horizontal Icons Section for Join Us -->
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Join us</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Ikuti Kami</h2>
                         <ul class="flex space-x-5">
                             <a href="https://www.facebook.com/prspdnffajarharapan"
                                 class="text-white hover:text-gray-900 dark:hover:text-white bg-gray-600 hover:bg-gray-300 p-1 rounded-full">
