@@ -7,8 +7,9 @@ use App\Models\PhotoGallery;
 class GalleryController extends Controller
 {
     public function index()
-    {
-        $photos = PhotoGallery::paginate(20); // Menggunakan pagination dengan 20 item per halaman
-        return view('gallery.index', compact('photos'));
-    }
+{
+    $photos = PhotoGallery::orderBy('created_at', 'desc')->paginate(20); // Sort by latest first and paginate
+    return view('gallery.index', compact('photos'));
+}
+
 }

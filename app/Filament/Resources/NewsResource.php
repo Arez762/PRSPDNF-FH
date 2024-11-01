@@ -34,30 +34,38 @@ class NewsResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->required()
-                    ->label('Judul'),
-                RichEditor::make('content') // Menggunakan RichEditor agar mendukung teks kaya dan gambar
+                    ->label('Judul')
+                    ->maxLength(255)
+                    ->hint('Max 255 characters allowed')
+                    ->reactive()
+                    ->rule('string'),
+                RichEditor::make('content')
                     ->required()
                     ->label('Konten')
-                    ->columnSpan('full'), // Membuat inputan lebih lebar
+                    ->columnSpan('full'),
                 FileUpload::make('thumbnail')
                     ->image()
                     ->required()
-                    ->label('Thumbnail'),
-                FileUpload::make('gallery') // Inputan untuk mengunggah beberapa gambar
+                    ->label('Thumbnail')
+                    ->maxSize(10240)
+                    ->hint('Max 10Mb'),
+                FileUpload::make('gallery')
                     ->image()
-                    ->multiple() // Memungkinkan unggahan banyak gambar
+                    ->multiple()
                     ->label('Galeri Gambar')
-                    ->directory('galleries') // Direktori untuk menyimpan gambar di dalam storage
-                    ->maxFiles(6), // Jumlah maksimum file yang dapat diunggah
+                    ->directory('galleries')
+                    ->maxFiles(6)
+                    ->maxSize(10240)
+                    ->hint('Max 10Mb'),
                 Select::make('category_id')
-                    ->relationship('category', 'name') // Menampilkan nama kategori
+                    ->relationship('category', 'name')
                     ->required()
                     ->label('Kategori'),
-                Select::make('user_id') // Menggunakan kolom 'user_id' untuk menyimpan ID pengguna yang login
-                    ->relationship('user', 'name') // Menggunakan relasi 'user' untuk mengambil 'name' dari model User
-                    ->default(Filament::auth()->user()->id) // Mengisi otomatis dengan ID pengguna yang login
-                    ->disabled() // Agar nilai ini tidak dapat diubah oleh pengguna
-                    ->required() // Memastikan bahwa field ini wajib diisi
+                Select::make('user_id')
+                    ->relationship('user', 'name')
+                    ->default(Filament::auth()->user()->id)
+                    ->disabled()
+                    ->required()
                     ->label('Author'),
                 TextInput::make('slug')
                     ->disabled()
@@ -67,9 +75,16 @@ class NewsResource extends Resource
                     ->default(now())
                     ->required()
                     ->label('Waktu Unggah'),
+                Select::make('status')
+                    ->options([
+                        'draft' => 'Draft',
+                        'publish' => 'Publish',
+                    ])
+                    ->default('draft')
+                    ->label('Status')
+                    ->disabled(fn() => Auth::user()->role === 'author'), // Disable for author role
             ]);
     }
-
 
     public static function table(Table $table): Table
     {
@@ -83,8 +98,12 @@ class NewsResource extends Resource
                 Tables\Columns\TextColumn::make('category.name')
                     ->label('Kategori')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('user.name') // Menampilkan nama author
+                Tables\Columns\TextColumn::make('user.name')
                     ->label('Author')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('status')
+                    ->label('Status')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('content')
@@ -109,29 +128,27 @@ class NewsResource extends Resource
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
-                TrashedFilter::make() // Menambahkan filter untuk melihat data yang dihapus
-                ->visible(fn() => Auth::user()->role === 'admin'),
+                TrashedFilter::make()
+                    ->visible(fn() => Auth::user()->role === 'admin'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\RestoreAction::make()
-                    ->visible(fn($record) => $record->trashed()), // Pastikan hanya tampil untuk data yang dihapus
+                    ->visible(fn($record) => $record->trashed()),
                 Tables\Actions\ForceDeleteAction::make()
-                    ->visible(fn($record) => $record->trashed()) // Pastikan hanya tampil untuk data yang dihapus
+                    ->visible(fn($record) => $record->trashed())
             ])
             ->bulkActions([
                 Tables\Actions\RestoreBulkAction::make()
-                    ->visible(fn($records) => $records && $records->isNotEmpty() && $records->contains(fn($record) => $record->trashed())), // Cek jika records tidak kosong
+                    ->visible(fn($records) => $records && $records->isNotEmpty() && $records->contains(fn($record) => $record->trashed())),
                 Tables\Actions\ForceDeleteBulkAction::make()
-                    ->visible(fn($records) => $records && $records->isNotEmpty() && $records->contains(fn($record) => $record->trashed())), // Cek jika records tidak kosong
+                    ->visible(fn($records) => $records && $records->isNotEmpty() && $records->contains(fn($record) => $record->trashed())),
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make()
-                    ->visible(fn() => Auth::user()->role === 'admin'),
+                        ->visible(fn() => Auth::user()->role === 'admin'),
                 ]),
             ]);
     }
-
-
 
     public static function getRelations(): array
     {
@@ -149,9 +166,6 @@ class NewsResource extends Resource
         ];
     }
 
-    /**
-     * Hanya admin yang dapat mengakses halaman ini.
-     */
     public static function canViewAny(): bool
     {
         return in_array(Auth::user()->role, ['admin', 'author']);

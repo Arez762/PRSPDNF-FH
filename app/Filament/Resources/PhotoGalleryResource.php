@@ -39,11 +39,16 @@ class PhotoGalleryResource extends Resource
             ->schema([
                 TextInput::make('title')
                     ->required()
-                    ->label('Judul'),
+                    ->label('Judul')
+                    ->maxLength(255) // Enforce a maximum of 255 characters
+                    ->hint('Max 255 characters allowed') // Shows a hint below the input
+                    ->reactive(), // Enables real-time validation,
                 FileUpload::make('image_path')
                     ->image()
                     ->required()
-                    ->label('Upload Gambar'),
+                    ->label('Upload Gambar')
+                    ->maxSize(10240) // Maximum upload size of 10MB (in KB)
+                    ->hint('Max 10Mb'),
                 Hidden::make('user_id')
                     ->default(fn() => Filament::auth()->user() ? Filament::auth()->user()->id : null)
                     ->required(),
@@ -66,8 +71,8 @@ class PhotoGalleryResource extends Resource
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
-                TrashedFilter::make()// Filter untuk menampilkan data yang dihapus sementara
-                ->visible(fn() => Auth::user()->role === 'admin'),
+                TrashedFilter::make() // Filter untuk menampilkan data yang dihapus sementara
+                    ->visible(fn() => Auth::user()->role === 'admin'),
             ])
             ->actions([
                 EditAction::make()
@@ -78,8 +83,8 @@ class PhotoGalleryResource extends Resource
                 Tables\Actions\RestoreAction::make()
                     ->visible(fn($record) => $record->trashed()), // Hanya tampil untuk data yang dihapus sementara
                 Tables\Actions\ForceDeleteAction::make()
-                    ->visible(fn($record) => $record->trashed())// Hanya tampil untuk data yang dihapus sementara
-                    
+                    ->visible(fn($record) => $record->trashed()) // Hanya tampil untuk data yang dihapus sementara
+
             ])
             ->bulkActions([
                 Tables\Actions\RestoreBulkAction::make()

@@ -15,8 +15,10 @@ class NewsController extends Controller
     {
         $search = $request->input('search');
 
-        // Query utama untuk berita
-        $newsQuery = News::with('category')->orderByDesc('created_at');
+        // Query utama untuk berita yang berstatus publish
+        $newsQuery = News::with('category')
+            ->where('status', 'publish') // Only include published news
+            ->orderByDesc('created_at');
 
         if ($search) {
             $newsQuery->where(function ($query) use ($search) {
@@ -27,93 +29,61 @@ class NewsController extends Controller
 
         $news = $newsQuery->paginate(12);
 
-        // Jika ini adalah request JSON (misalnya API)
         if ($request->wantsJson()) {
             return response()->json($news);
         }
 
-        // Konten tambahan berdasarkan halaman
         $topViewsNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('views')
             ->take(5)
             ->get();
 
         $recentNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('created_at')
             ->take(5)
             ->get();
 
         $recentNewsHeader = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('created_at')
             ->take(12)
             ->get();
 
-        $categories = Category::withCount('news')->get();
+        $categories = Category::withCount(['news as news_count'])->get();
 
-        // Mengelompokkan berita berdasarkan kategori untuk halaman utama
         $newsByCategory = [];
         foreach ($categories as $category) {
             $newsByCategory[$category->id] = News::with('category')
                 ->where('category_id', $category->id)
+                ->where('status', 'publish')
                 ->orderByDesc('created_at')
                 ->take(8)
                 ->get();
         }
 
-        // Tentukan tampilan yang berbeda berdasarkan halaman
         if ($forHome) {
             return view('index', compact('news', 'categories', 'topViewsNews', 'recentNews', 'recentNewsHeader', 'newsByCategory'));
         }
 
-        // Jika bukan halaman utama, tampilkan di news.index
         return view('news.index', compact('news', 'categories', 'topViewsNews', 'recentNews', 'search', 'recentNewsHeader', 'newsByCategory'));
-    }
-
-
-    // Menyimpan berita baru melalui API
-    public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'content' => 'required|string',
-            'category_id' => 'required|exists:categories,id',
-        ]);
-
-        $news = News::create([
-            'name' => $validatedData['name'],
-            'content' => $validatedData['content'],
-            'category_id' => $validatedData['category_id'],
-            'slug' => Str::slug($validatedData['name']),
-        ]);
-
-        return response()->json($news, 201);
-    }
-
-    // Mengupdate berita melalui API
-    public function update(Request $request, $id)
-    {
-        $news = News::findOrFail($id);
-
-        $validatedData = $request->validate([
-            'name' => 'sometimes|required|string|max:255',
-            'content' => 'sometimes|required|string',
-            'category_id' => 'sometimes|required|exists:categories,id',
-        ]);
-
-        $news->update($validatedData);
-
-        return response()->json($news);
     }
 
     // Menampilkan detail berita berdasarkan slug
     public function show(Request $request, $slug)
     {
         $recentNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('created_at')
             ->take(3)
             ->get();
 
-        $newsItem = News::where('slug', $slug)->with('category')->firstOrFail();
+        $newsItem = News::where('slug', $slug)
+            ->where('status', 'publish') // Only allow published news
+            ->with('category')
+            ->firstOrFail();
+
         $newsItem->increment('views');
 
         if ($request->wantsJson()) {
@@ -123,11 +93,13 @@ class NewsController extends Controller
         $categories = Category::withCount('news')->get();
 
         $popularNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('views')
             ->take(3)
             ->get();
 
         $randomNews = News::with('category')
+            ->where('status', 'publish')
             ->inRandomOrder()
             ->take(8)
             ->get();
@@ -139,11 +111,13 @@ class NewsController extends Controller
     public function category(Request $request, $slug)
     {
         $popularNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('views')
             ->take(3)
             ->get();
 
         $recentNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('created_at')
             ->take(3)
             ->get();
@@ -153,6 +127,7 @@ class NewsController extends Controller
 
         $newsQuery = News::with('category')
             ->where('category_id', $category->id)
+            ->where('status', 'publish') // Only include published news
             ->orderByDesc('created_at');
 
         if ($search) {
@@ -182,21 +157,25 @@ class NewsController extends Controller
     {
         $search = $request->input('search');
 
-        $newsQuery = News::with('category')->where(function ($query) use ($search) {
-            $query->where('name', 'like', '%' . $search . '%')
-                ->orWhere('content', 'like', '%' . $search . '%');
-        });
+        $newsQuery = News::with('category')
+            ->where('status', 'publish') // Only include published news
+            ->where(function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%')
+                    ->orWhere('content', 'like', '%' . $search . '%');
+            });
 
         $news = $newsQuery->paginate(12);
 
         $categories = Category::withCount('news')->get();
 
         $popularNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('views')
             ->take(3)
             ->get();
 
         $recentNews = News::with('category')
+            ->where('status', 'publish')
             ->orderByDesc('created_at')
             ->take(3)
             ->get();
@@ -215,13 +194,17 @@ class NewsController extends Controller
 
     public function getNewsData($search = null)
     {
-        $newsQuery = News::with('category')->orderByDesc('created_at');
+        $newsQuery = News::with('category')
+            ->where('status', 'publish') // Only include published news
+            ->orderByDesc('created_at');
+
         if ($search) {
             $newsQuery->where(function ($query) use ($search) {
                 $query->where('name', 'like', '%' . $search . '%')
                     ->orWhere('content', 'like', '%' . $search . '%');
             });
         }
+
         return $newsQuery->paginate(12);
     }
 }

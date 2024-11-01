@@ -67,9 +67,45 @@
                 </div>
             @endforeach
         </div>
-        <div class="mt-4">
-            {{ $photos->links() }}
+
+        <div class="m-4 flex items-center justify-center space-x-2">
+            {{-- Previous Page Link --}}
+            @if ($photos->onFirstPage())
+                <span class="px-3 py-1 bg-gray-200 text-gray-500 rounded cursor-not-allowed">&laquo; Previous</span>
+            @else
+                <a href="{{ $photos->previousPageUrl() }}"
+                    class="px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600">&laquo; Previous</a>
+            @endif
+
+            {{-- Pagination Elements --}}
+            @foreach ($photos->links()->elements as $element)
+                {{-- "Three Dots" Separator --}}
+                @if (is_string($element))
+                    <span class="px-3 py-1 text-gray-500">{{ $element }}</span>
+                @endif
+
+                {{-- Array of Links --}}
+                @if (is_array($element))
+                    @foreach ($element as $page => $url)
+                        @if ($page == $photos->currentPage())
+                            <span class="px-3 py-1 bg-orange-500 text-white rounded">{{ $page }}</span>
+                        @else
+                            <a href="{{ $url }}"
+                                class="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">{{ $page }}</a>
+                        @endif
+                    @endforeach
+                @endif
+            @endforeach
+
+            {{-- Next Page Link --}}
+            @if ($photos->hasMorePages())
+                <a href="{{ $photos->nextPageUrl() }}"
+                    class="px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600">Next &raquo;</a>
+            @else
+                <span class="px-3 py-1 bg-gray-200 text-gray-500 rounded cursor-not-allowed">Next &raquo;</span>
+            @endif
         </div>
+
 
         <!-- Modal untuk melihat gambar lebih detail -->
 
@@ -80,7 +116,8 @@
         class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center hidden z-40">
         <div class="relative w-full max-w-xl max-h-[80vh] p-4">
             <!-- Tombol untuk menutup modal -->
-            <button class="absolute top-4 right-4 text-white text-2xl font-bold" onclick="closeModal()">&times;</button>
+            <button class="absolute top-4 right-4 pr-1 text-white text-2xl font-bold"
+                onclick="closeModal()">&times;</button>
 
             <!-- Tombol Previous dan Next -->
             <button class="absolute left-4 lg:-left-6 top-1/2 transform -translate-y-1/2 text-white text-3xl font-bold"
@@ -147,7 +184,7 @@
     </script>
 
 
-{{-- 
+    {{-- 
     <x-card-all></x-card-all> --}}
 
     <x-footer></x-footer>

@@ -15,14 +15,15 @@ class News extends Model
     protected $fillable = [
         'name',
         'slug',
+        'status', // Add the status field
         'thumbnail',
         'content',
         'category_id',
-        'user_id', // Pastikan user_id ada di fillable untuk mass assignment
+        'user_id', 
         'upload_time',
         'gallery',
     ];
-
+    
     // Cast agar kolom tertentu diperlakukan sebagai tanggal
     protected $dates = ['deleted_at', 'upload_time'];
 
@@ -48,6 +49,16 @@ class News extends Model
     // Mengisi user_id secara otomatis saat model dibuat
     protected static function booted()
     {
+        static::creating(function ($news) {
+            if (!$news->user_id) {
+                $news->user_id = Filament::auth()->user()->id;
+            }
+    
+            if (!$news->status) {
+                $news->status = 'draft'; // Set default status to 'draft'
+            }
+        });
+        
         static::creating(function ($news) {
             // Jika user_id tidak diatur, isi dengan ID pengguna yang login
             if (!$news->user_id) {

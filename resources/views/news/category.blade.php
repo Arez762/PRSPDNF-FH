@@ -72,17 +72,20 @@
 
     <div class="lg:py-16 py-12"></div>
 
-    
 
-    <section class="text-gray-600 body-font lg:flex lg:flex-row lg:mx-32" >
+
+    <section class="text-gray-600 body-font lg:flex lg:flex-row lg:mx-32">
         <div class="lg:w-3/4  items-start p-2 lg:pt-8">
             <div class="my-4 lg:pl-4">
-                <p class="text-lg text-black lg:text-2xl font-bold">Kategori: {{ $news->first()->category->name }}</p>
+                <p class="text-lg text-black lg:text-2xl font-bold">
+                    Kategori: {{ $news->isNotEmpty() ? $news->first()->category->name : 'Berita belum tersedia' }}
+                </p>
+                
                 <div class="w-16 lg:w-20 h-1 bg-orange-500"></div>
             </div>
 
             <div class="flex flex-wrap w-full">
-                @foreach ($news as $item)
+                @forelse ($news as $item)
                     <div class="lg:w-1/4 md:w-1/2 w-full p-2 flex-shrink-0">
                         <div class="h-full border-gray-200 border-opacity-60 rounded shadow-md overflow-hidden">
                             <a href="{{ route('news.show', $item->slug) }}">
@@ -124,8 +127,13 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="w-full text-center p-4">
+                        <p class="text-gray-500 text-lg">Belum ada berita tersedia</p>
+                    </div>
+                @endforelse
             </div>
+
 
             <!-- Pagination links -->
             <div class="mt-4 px-4">
@@ -302,35 +310,7 @@
     </section>
 
     {{-- footer start --}}
-    <footer class="bg-[#697077]">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <!-- Logo Section -->
-            <div class="mb-6 md:mb-0 flex items-center space-x-3 rtl:space-x-reverse">
-                <!-- Logo with responsive sizing -->
-                <img src="https://a-rez.my.id/icon/Logo%20PRSPDNF%20FH.ico" class="h-8 md:h-10 lg:h-12"
-                    alt="PRSPDNF Logo" />
-
-                <div class="flex flex-col items-center">
-                    <!-- Text with responsive font sizes -->
-                    <span class="uppercase text-center text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
-                    <span class="font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
-                </div>
-                </a>
-                <!-- Extended Horizontal Line -->
-            </div>
-            <!-- Footer Bottom -->
-            <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between flex flex-col-reverse sm:flex-row">
-                <span class="lg:text-sm md-text-sm text-xs text-white sm:text-center dark:text-white">
-                    © 2024 <a href="#" class="hover:underline">Magang PRSPDNF FH</a> @ All Rights Reserved.
-                </span>
-                <div class="text-white flex mb-4 sm:justify-center sm:mb-0 space-x-4">
-                    <a href="/" class="hover:underline">Home</a>
-                    <a href="aboutus" class="hover:underline">About us</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <x-footer></x-footer>
     {{-- footer end --}}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

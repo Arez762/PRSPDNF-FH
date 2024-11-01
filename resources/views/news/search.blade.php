@@ -13,7 +13,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     @vite('resources/css/app.css')
     <style>
-
         /* Animasi Slide Down */
         @keyframes slide-down {
             0% {
@@ -137,7 +136,7 @@
                     @endif
                 </div>
                 <!-- Pagination links -->
-                <div class="mt-4 px-4">
+                <div class="mt-4 px-4 ">
                     <div class="mt-4 px-4">
                         {{ $news->appends(['search' => request('search')])->links() }}
                     </div>
@@ -308,35 +307,7 @@
     </section>
 
     {{-- footer start --}}
-    <footer class="bg-[#697077]">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <!-- Logo Section -->
-            <div class="mb-6 md:mb-0 flex items-center space-x-3 rtl:space-x-reverse">
-                <!-- Logo with responsive sizing -->
-                <img src="https://a-rez.my.id/icon/Logo%20PRSPDNF%20FH.ico" class="h-8 md:h-10 lg:h-12"
-                    alt="PRSPDNF Logo" />
-
-                <div class="flex flex-col items-center">
-                    <!-- Text with responsive font sizes -->
-                    <span class="uppercase text-center text-white text-xs md:text-sm lg:text-base">PRSPDNF</span>
-                    <span class="font-semibold text-white text-sm md:text-lg lg:text-xl">Fajar Harapan</span>
-                </div>
-                </a>
-                <!-- Extended Horizontal Line -->
-            </div>
-            <!-- Footer Bottom -->
-            <hr class="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between flex flex-col-reverse sm:flex-row">
-                <span class="lg:text-sm md-text-sm text-xs text-white sm:text-center dark:text-white">
-                    © 2024 <a href="#" class="hover:underline">Magang PRSPDNF FH</a> @ All Rights Reserved.
-                </span>
-                <div class="text-white flex mb-4 sm:justify-center sm:mb-0 space-x-4">
-                    <a href="/" class="hover:underline">Home</a>
-                    <a href="aboutus" class="hover:underline">About us</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <x-footer></x-footer>
     {{-- footer end --}}
 
 </body>

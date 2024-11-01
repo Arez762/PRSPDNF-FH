@@ -20,7 +20,6 @@ class Category extends Model
     {
         $this->attributes['name'] = $value;
 
-        // Hanya mengatur ulang slug jika nama berubah
         if (!isset($this->attributes['slug']) || $this->attributes['slug'] !== Str::slug($value)) {
             $this->attributes['slug'] = Str::slug($value);
         }
@@ -28,7 +27,6 @@ class Category extends Model
 
     /**
      * Get the route key name for Laravel model binding.
-     * This allows using slug in the route instead of ID.
      */
     public function getRouteKeyName()
     {
@@ -36,16 +34,15 @@ class Category extends Model
     }
 
     /**
-     * Relationship: A category has many news.
+     * Relationship: A category has many published news items.
      */
     public function news()
     {
-        return $this->hasMany(News::class);
+        return $this->hasMany(News::class)->where('status', 'publish');
     }
 
     /**
      * Accessor for icon attribute.
-     * This can be useful if you need to get a full URL or modify the path.
      */
     public function getIconAttribute($value)
     {

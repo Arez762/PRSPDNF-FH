@@ -128,7 +128,6 @@
             </div>
         </div>
     </section>
-
     {{-- about end --}}
 
     <!-- Section why Start -->
@@ -710,7 +709,7 @@
 
     {{-- gallery start --}}
     <div data-aos="fade">
-        <div class="container mx-auto px-4 lg:py-16 py-8 text-center justify-center lg:px-40">
+        <div class="container mx-auto px-4 lg:py-16 py-8 text-center justify-center md:px-12 lg:px-32">
             <h2 class="lg:text-3xl md:text-2xl text-xl font-extrabold text-gray-900 mb-8">
                 Jelajahi momen-momen inspiratif di <span class="text-orange-500">Fajar Harapan!</span>
             </h2>
@@ -825,8 +824,6 @@
             </div>
         </div>
     </div>
-
-
     {{-- gallery end --}}
 
     {{-- news start --}}
@@ -929,7 +926,6 @@
             </a>
         </div>
     </div>
-
     <script>
         // JavaScript carousel script
         const container = document.querySelector('.carousel');
@@ -1031,6 +1027,12 @@
 
 
     {{-- kerjasama --}}
+    <style>
+        /* Pause animasi saat hover pada elemen parent dengan class "group" */
+        .group:hover .animate-loop-scroll {
+            animation-play-state: paused;
+        }
+    </style>
     <section class="py-6 rounded-xl mx-4 md:mx-8 lg:mx-12 my-8 bg-white shadow-xl" data-aos="fade-up">
         <div class="w-full text-center text-xl md:text-2xl lg:text-3xl font-semibold lg:pb-8 md:pb-4 pb-4">Kerjasama
         </div>
@@ -1040,7 +1042,7 @@
                 class=" absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent pointer-events-none blur-[3px] z-10">
             </div>
 
-            <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused">
+            <div class="flex space-x-8 md:space-x-16 animate-loop-scroll">
                 <img loading="lazy" src="{{ asset('Image/logo-dinas/LOGO KABUPATEN BALANGAN.png') }}"
                     class="max-w-none h-16 md:h-24 lg:h-32" alt="image0">
                 <img loading="lazy"
@@ -1069,7 +1071,7 @@
             </div>
 
             <!-- Hidden Scrolling Images for Loop -->
-            <div class="flex space-x-8 md:space-x-16 animate-loop-scroll group-hover:paused" aria-hidden="true">
+            <div class="flex space-x-8 md:space-x-16 animate-loop-scroll " aria-hidden="true">
                 <img loading="lazy" src="{{ asset('Image/logo-dinas/LOGO KABUPATEN BALANGAN.png') }}"
                     class="max-w-none h-16 md:h-24 lg:h-32" alt="image0">
                 <img loading="lazy"
@@ -1254,8 +1256,6 @@
         </div>
     </footer>
     {{-- footer end --}}
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
